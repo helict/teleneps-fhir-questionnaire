@@ -1,0 +1,185 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/allergie-asthma-med-list",
+  "version": "1.0.0",
+  "name": "AllergieAsthmaMedList",
+  "title": "Allergie- und Asthma-Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Allergie und Asthma Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Azelastin_Allergodil",
+      "display": "Azelastin, Allergodil"
+    },
+    {
+      "code": "Cetirizin_Cetiderm_Reactine_Zyrtec",
+      "display": "Cetirizin, Cetiderm, Reactine, Zyrtec"
+    },
+    {
+      "code": "Clemastin_Tavegil",
+      "display": "Clemastin, Tavegil"
+    },
+    {
+      "code": "Desloratadin_Aerius_Dasselta_Desloraderm",
+      "display": "Desloratadin, Aerius, Dasselta, Desloraderm"
+    },
+    {
+      "code": "Dimetinden_Fenistil",
+      "display": "Dimetinden, Fenistil"
+    },
+    {
+      "code": "Ebastin_Ebastel",
+      "display": "Ebastin, Ebastel"
+    },
+    {
+      "code": "Fexofenaderm_Telfast",
+      "display": "Fexofenaderm, Telfast"
+    },
+    {
+      "code": "Hydroxyzin_AH_3_N_Atarax",
+      "display": "Hydroxyzin, AH 3 N, Atarax"
+    },
+    {
+      "code": "Levocetirizin_Xusal_Xyzall",
+      "display": "Levocetirizin, Xusal, Xyzall"
+    },
+    {
+      "code": "Loratadin_Laraderm_Lorano",
+      "display": "Loratadin, Laraderm, Lorano"
+    },
+    {
+      "code": "Mizolastin_Mizollen_Zolim",
+      "display": "Mizolastin, Mizollen, Zolim"
+    },
+    {
+      "code": "Rupatadin_Rupafin_Urtimed",
+      "display": "Rupatadin, Rupafin, Urtimed"
+    },
+    {
+      "code": "Terfenadin",
+      "display": "Terfenadin"
+    },
+    {
+      "code": "Cromoglicinsäure_CromoHexal_Vividrin",
+      "display": "Cromoglicinsäure, CromoHexal, Vividrin"
+    },
+    {
+      "code": "Levocabastin_Livocab",
+      "display": "Levocabastin, Livocab"
+    },
+    {
+      "code": "Fenoterol_Berotec_Dosberotec",
+      "display": "Fenoterol, Berotec, Dosberotec"
+    },
+    {
+      "code": "Salbutamol_Apsomol_Bronchospray_Pentamol_SalbuHexal_Salbulair_Sultanol_Ventilastin_Novolizer",
+      "display": "Salbutamol, Apsomol, Bronchospray, Pentamol, SalbuHexal, Salbulair, Sultanol, Ventilastin Novolizer"
+    },
+    {
+      "code": "Terbualin_Aerodur_Bricanyl",
+      "display": "Terbualin, Aerodur, Bricanyl"
+    },
+    {
+      "code": "Formoterol_Atmios_Foradil_P_Forair_Formatris_Formotop_Oxis",
+      "display": "Formoterol, Atmios, Foradil P, Forair, Formatris, Formotop, Oxis"
+    },
+    {
+      "code": "Indacaterol_Onbrez_Breehaler",
+      "display": "Indacaterol, Onbrez Breehaler"
+    },
+    {
+      "code": "Olodaterol_Striverdi_Respimat",
+      "display": "Olodaterol, Striverdi Respimat"
+    },
+    {
+      "code": "Sameterol_Serevent",
+      "display": "Sameterol, Serevent"
+    },
+    {
+      "code": "Bambuterol_Bambex",
+      "display": "Bambuterol, Bambex"
+    },
+    {
+      "code": "Clenbuterol_Spiropent",
+      "display": "Clenbuterol, Spiropent"
+    },
+    {
+      "code": "Reproterol_Bronchospasmin",
+      "display": "Reproterol, Bronchospasmin"
+    },
+    {
+      "code": "Orciprenalin_Alupent",
+      "display": "Orciprenalin, Alupent"
+    },
+    {
+      "code": "Salbutamol_Salbubronch",
+      "display": "Salbutamol, Salbubronch"
+    },
+    {
+      "code": "Terbuatalin_Bricanyl",
+      "display": "Terbuatalin, Bricanyl"
+    },
+    {
+      "code": "Ipratrpiumbromid_Atovent_Iprabronch_Ipratropium_Teva",
+      "display": "Ipratrpiumbromid, Atovent, Iprabronch, Ipratropium Teva"
+    },
+    {
+      "code": "Beclometason_BecloHexal_Becloment_Junix_Sanasthmax_Ventolair",
+      "display": "Beclometason, BecloHexal, Becloment, Junix, Sanasthmax, Ventolair"
+    },
+    {
+      "code": "Budesonid_Budes_N_Budiair_Cyclocaps_Larbex_Miflonide_Novopulmon_Pulmicor",
+      "display": "Budesonid, Budes N, Budiair, Cyclocaps, Larbex Miflonide, Novopulmon, Pulmicor"
+    },
+    {
+      "code": "Ciclesnoid_Alvesco",
+      "display": "Ciclesnoid, Alvesco"
+    },
+    {
+      "code": "Futicason_Flutide_FlutiHexal",
+      "display": "Futicason, Flutide, FlutiHexal"
+    },
+    {
+      "code": "Mometason_Asmanex",
+      "display": "Mometason, Asmanex"
+    },
+    {
+      "code": "Aminophyllin",
+      "display": "Aminophyllin"
+    },
+    {
+      "code": "Theophyllin_Bronchoparat_Bronchoretard_Contiphyllin_Euphylong_Solosin_theophyllin-ratioph._Uniphyllin",
+      "display": "Theophyllin, Bronchoparat, Bronchoretard, Contiphyllin, Euphylong, Solosin, theophyllin-ratioph., Uniphyllin"
+    },
+    {
+      "code": "Montelukast_Monkasta_Montelair_Monelubronch_Singulair",
+      "display": "Montelukast, Monkasta, Montelair, Monelubronch, Singulair"
+    }
+  ]
+}

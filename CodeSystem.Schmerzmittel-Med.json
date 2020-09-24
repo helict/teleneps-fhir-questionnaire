@@ -1,0 +1,145 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/schmerzmittel-med-list",
+  "version": "1.0.0",
+  "name": "SchmerzmittelMedList",
+  "title": "Schmerzmittel-Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Schmerzmittel-Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Paracetamol_Acetalgin_Dafalgan_Panadol_und_Tylenol",
+      "display": "Paracetamol Acetalgin, Dafalgan, Panadol und Tylenol"
+    },
+    {
+      "code": "Acetylsalicylsäure_Aspirin_ASS_Delgesic_Godamed",
+      "display": "Acetylsalicylsäure, Aspirin, ASS, Delgesic, Godamed"
+    },
+    {
+      "code": "COX-2-Hemmer_Celecoxib_Rofecoxib",
+      "display": "COX-2-Hemmer, Celecoxib, Rofecoxib"
+    },
+    {
+      "code": "Diclofenac_Voltaren",
+      "display": "Diclofenac, Voltaren"
+    },
+    {
+      "code": "Ibuprofen",
+      "display": "Ibuprofen"
+    },
+    {
+      "code": "Mefenaminsäure_Ponstan",
+      "display": "Mefenaminsäure, Ponstan"
+    },
+    {
+      "code": "Naproxen_Apranax_Proxen_Alve",
+      "display": "Naproxen, Apranax, Proxen, Alve"
+    },
+    {
+      "code": "Codein_Bronchicum_Mono_Codein_Codicaps_Codicompren",
+      "display": "Codein, Bronchicum Mono Codein, Codicaps, Codicompren"
+    },
+    {
+      "code": "Fentanyl_Abstral_Actiq_Breakyl_Effentora_Instanyl_PecFent_Matrifen_Tentavera_Tentamat_Durogesic",
+      "display": "Fentanyl, Abstral, Actiq, Breakyl, Effentora, Instanyl, PecFent, Matrifen, Tentavera, Tentamat Durogesic"
+    },
+    {
+      "code": "Hydromorphon_Palladon_Jurnista",
+      "display": "Hydromorphon, Palladon, Jurnista"
+    },
+    {
+      "code": "Morphin_Capros_M-long_Morthanton_MSI_MSR_MST_Painbreak_Sevredol_Substitol",
+      "display": "Morphin, Capros, M-long, Morthanton, MSI MSR MST Painbreak Sevredol Substitol"
+    },
+    {
+      "code": "Oxycodon_Oxygesic",
+      "display": "Oxycodon, Oxygesic"
+    },
+    {
+      "code": "Pethidin_Dolantin_Colcontral",
+      "display": "Pethidin, Dolantin, Colcontral"
+    },
+    {
+      "code": "Afentanil_Rapifen",
+      "display": "Afentanil, Rapifen"
+    },
+    {
+      "code": "Levomethadon_L-Polamidon",
+      "display": "Levomethadon, L-Polamidon"
+    },
+    {
+      "code": "Piritramid_Dipidolor",
+      "display": "Piritramid, Dipidolor"
+    },
+    {
+      "code": "Remifentanil_Remifentanyl_Ultiva",
+      "display": "Remifentanil, Remifentanyl, Ultiva"
+    },
+    {
+      "code": "Sufentanil",
+      "display": "Sufentanil"
+    },
+    {
+      "code": "Buprenorphin_Norspan_Subutex_Temgesic_Transtec",
+      "display": "Buprenorphin, Norspan, Subutex, Temgesic, Transtec"
+    },
+    {
+      "code": "Meptazinol_Meptid",
+      "display": "Meptazinol, Meptid"
+    },
+    {
+      "code": "Nalbuphin_k_Nalpain",
+      "display": "Nalbuphin,k Nalpain"
+    },
+    {
+      "code": "Naloxon",
+      "display": "Naloxon"
+    },
+    {
+      "code": "Nalorexon_Nalorex_Nalorexin",
+      "display": "Nalorexon, Nalorex, Nalorexin"
+    },
+    {
+      "code": "Tramadol_Amadol_Tial_Tramadolor_Tramal_Travex",
+      "display": "Tramadol, Amadol, Tial, Tramadolor, Tramal, Travex"
+    },
+    {
+      "code": "Tapentadol_Palexia",
+      "display": "Tapentadol, Palexia"
+    },
+    {
+      "code": "Tilidin_Tilicomp_Valoron",
+      "display": "Tilidin, Tilicomp, Valoron"
+    },
+    {
+      "code": "Schmerzpflaster_Fentanylpflaster",
+      "display": "Schmerzpflaster, Fentanylpflaster"
+    }
+  ]
+}

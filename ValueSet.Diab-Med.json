@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "profile":  [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/ValueSet/diabetes-med-list",
+  "version": "1.0.0",
+  "name": "DiabetesMedList",
+  "title": "Diabetes-Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "description": "Diabetes-Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "compose": {
+    "include":  [
+      {
+        "system": "http://teleneps.de/fhir/CodeSystem/diabetes-med-list"
+      }
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/rheuma-med-list",
+  "version": "1.0.0",
+  "name": "RheumaMedList",
+  "title": "Rheumatologische Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Rheumatologische Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Azathioprin_Azafalk_Azamedac_Aza_Q_Azaimun_Imurek_Imurel_Zytrim",
+      "display": "Azathioprin, Azafalk, Azamedac, Aza Q, Azaimun, Imurek, Imurel, Zytrim"
+    },
+    {
+      "code": "Auranofin_Ridaura",
+      "display": "Auranofin, Ridaura"
+    },
+    {
+      "code": "Choroquin_Rsochin",
+      "display": "Choroquin, Rsochin"
+    },
+    {
+      "code": "Cyclophosphamid_Endoxan",
+      "display": "Cyclophosphamid, Endoxan"
+    },
+    {
+      "code": "Leflunomid_Arava",
+      "display": "Leflunomid, Arava"
+    },
+    {
+      "code": "Methotrexat_Lantarel_Metex_MTX_Hexal_/_Sandoz",
+      "display": "Methotrexat, Lantarel, Metex, MTX Hexal / Sandoz"
+    },
+    {
+      "code": "Mycophenolat-Mofetil_/_Mycophenolsäure",
+      "display": "Mycophenolat-Mofetil / Mycophenolsäure"
+    },
+    {
+      "code": "Sulfasalazin_Azulfidine_Pleon_Salazopyrine",
+      "display": "Sulfasalazin, Azulfidine, Pleon, Salazopyrine"
+    },
+    {
+      "code": "Penicillamin_Metalcaptase",
+      "display": "Penicillamin, Metalcaptase"
+    },
+    {
+      "code": "Hydroxchloroquinsulfat_Plaquenil_Quensyl",
+      "display": "Hydroxchloroquinsulfat, Plaquenil, Quensyl"
+    },
+    {
+      "code": "Betamethason_Celestamine_Celestan_Depot_Celestone",
+      "display": "Betamethason, Celestamine, Celestan Depot, Celestone"
+    },
+    {
+      "code": "Cloprednol_Syntestan",
+      "display": "Cloprednol, Syntestan"
+    },
+    {
+      "code": "Deflazacort_Calcort",
+      "display": "Deflazacort, Calcort"
+    },
+    {
+      "code": "Dexamethason_Dexa-Allvoran_Dexaflam_inject_DexaHexal_Fortecortin_Lipotalon",
+      "display": "Dexamethason, Dexa-Allvoran, Dexaflam inject, DexaHexal, Fortecortin, Lipotalon"
+    },
+    {
+      "code": "Fludrocortison_Astonin",
+      "display": "Fludrocortison, Astonin"
+    },
+    {
+      "code": "Hydrocortison",
+      "display": "Hydrocortison"
+    },
+    {
+      "code": "Methylprednisolon_Metypred_M_PredniHexalo_Urbason",
+      "display": "Methylprednisolon, Metypred, M PredniHexalo, Urbason"
+    },
+    {
+      "code": "Prednisolon_Decortin_H_Infectocortikrupp_Klismacort_PredniHexal_Prednisolut_Solu-Decortin_H",
+      "display": "Prednisolon, Decortin H, Infectocortikrupp, Klismacort, PredniHexal, Prednisolut, Solu-Decortin H"
+    },
+    {
+      "code": "Prednison_Cutason_Decortin_Rectodelt",
+      "display": "Prednison,  Cutason, Decortin, Rectodelt"
+    },
+    {
+      "code": "Trimacinolon_TriamHexal_Volon",
+      "display": "Trimacinolon, TriamHexal, Volon"
+    }
+  ]
+}

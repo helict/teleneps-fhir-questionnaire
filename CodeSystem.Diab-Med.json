@@ -1,0 +1,149 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/diabetes-med-list",
+  "version": "1.0.0",
+  "name": "DiabetesMedList",
+  "title": "Diabetes-Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Diabetes-Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+   {
+      "code": "Glibenclamid_Euglucon_Glib-ratioph._Gliben-CT_BlibenHexal_Maninil",
+      "display": "Glibenclamid, Euglucon, Glib-ratioph., Gliben-CT, BlibenHexal, Maninil"
+    },
+    {
+      "code": "Gliclazid_Diamicorn_Uno",
+      "display": "Gliclazid, Diamicorn Uno"
+    },
+    {
+      "code": "Glimepirid_Amaryl",
+      "display": "Glimepirid, Amaryl"
+    },
+    {
+      "code": "Gliquidon_Glurenorm",
+      "display": "Gliquidon, Glurenorm"
+    },
+    {
+      "code": "Nateglinid_Starlix",
+      "display": "Nateglinid, Starlix"
+    },
+    {
+      "code": "Repaglinid_Enyglid_Novonorm_Prandin",
+      "display": "Repaglinid, Enyglid, Novonorm, Prandin"
+    },
+    {
+      "code": "Metformin_Diabesin_Glucobon_Glucophage_Juformin_Metfoliquid_Geriasan_Metsop_Siofor",
+      "display": "Metformin, Diabesin, Glucobon, Glucophage, Juformin, Metfoliquid Geriasan, Metsop, Siofor"
+    },
+    {
+      "code": "Acarbose_Glucobay",
+      "display": "Acarbose, Glucobay"
+    },
+    {
+      "code": "Miglitol_Diastabol",
+      "display": "Miglitol, Diastabol"
+    },
+    {
+      "code": "Albiglutid_Eperzan",
+      "display": "Albiglutid, Eperzan"
+    },
+    {
+      "code": "Dulaglutid_Trulicity",
+      "display": "Dulaglutid, Trulicity"
+    },
+    {
+      "code": "Exenatid_Bydureon_Byetta",
+      "display": "Exenatid, Bydureon, Byetta"
+    },
+    {
+      "code": "Liraglutid_Saxenda_Victoza",
+      "display": "Liraglutid, Saxenda, Victoza"
+    },
+    {
+      "code": "Saxagliptin_Onglyza",
+      "display": "Saxagliptin, Onglyza"
+    },
+    {
+      "code": "Sitagliptin_Januvia_Xelevia",
+      "display": "Sitagliptin, Januvia, Xelevia"
+    },
+    {
+      "code": "Insulin_aspart_NovoRapid",
+      "display": "Insulin aspart, NovoRapid"
+    },
+    {
+      "code": "Insulin_glulisin_Apidra",
+      "display": "Insulin glulisin, Apidra"
+    },
+    {
+      "code": "Insulijn_lispro_Humalog_Liprolog",
+      "display": "Insulijn lispro, Humalog, Liprolog"
+    },
+    {
+      "code": "Insulin_human_Actrapid_Berlinsulin_Huminsulin_Hzumulin_Insuman_Infusat_Insuman_Rapid",
+      "display": "Insulin human, Actrapid, Berlinsulin, Huminsulin, Hzumulin, Insuman Infusat, Insuman Rapid"
+    },
+    {
+      "code": "Verzögerunsinsulin_Berlinsulin_H_Basal_Protaphane_Insulatrad",
+      "display": "Verzögerunsinsulin, Berlinsulin H Basal, Protaphane, Insulatrad"
+    },
+    {
+      "code": "Insulin_detemir_Levemir",
+      "display": "Insulin detemir, Levemir"
+    },
+    {
+      "code": "Insulin_glargin_Abasaglar_Lantjus_Toujeo",
+      "display": "Insulin glargin, Abasaglar, Lantjus Toujeo"
+    },
+    {
+      "code": "Simvastatin_Simva_Aristo_Simvabeta_SimvaHexal_Zocor",
+      "display": "Simvastatin, Simva Aristo, Simvabeta, SimvaHexal, Zocor"
+    },
+    {
+      "code": "Atorvastatin_Atoris_Lipitor_Sortis",
+      "display": "Atorvastatin, Atoris, Lipitor, Sortis"
+    },
+    {
+      "code": "Pravastatin_Lipifaxil._Prava_Basics_Pravalich_Paravasin_protect",
+      "display": "Pravastatin, Lipifaxil. Prava Basics, Pravalich, Paravasin protect"
+    },
+    {
+      "code": "Bezafibra_Befibrat_Cedur",
+      "display": "Bezafibra, Befibrat, Cedur"
+    },
+    {
+      "code": "Fenofibrat_Cil_Durafenat_Lipidil",
+      "display": "Fenofibrat, Cil, Durafenat, Lipidil"
+    },
+    {
+      "code": "Gemfibrozil_Gevilon",
+      "display": "Gemfibrozil, Gevilon"
+    }
+  ]
+}

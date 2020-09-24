@@ -1,0 +1,65 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/magen-darm-med-list",
+  "version": "1.0.0",
+  "name": "MagenDarmMedList",
+  "title": "Magen-Darm-Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Magen-Darm-Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Pantoprazol_Gastrozol_Pantorc_Pantozol_Rifun",
+      "display": "Pantoprazol, Gastrozol, Pantorc, Pantozol, Rifun"
+    },
+    {
+      "code": "Mesalazin_Asacol_Claversal_Mesavancol_Mezavant_Pentasa_Salofalk",
+      "display": "Mesalazin, Asacol, Claversal, Mesavancol, Mezavant, Pentasa, Salofalk"
+    },
+    {
+      "code": "Olsalazin_Dipentum",
+      "display": "Olsalazin, Dipentum"
+    },
+    {
+      "code": "Sulfasalazin_Azulfidine_Colo-Pleon_Salazophyrine",
+      "display": "Sulfasalazin, Azulfidine, Colo-Pleon, Salazophyrine"
+    },
+    {
+      "code": "Betamethason_Betnesol",
+      "display": "Betamethason, Betnesol"
+    },
+    {
+      "code": "Budesonid_budenofalk_Cortiment_Entocort",
+      "display": "Budesonid, budenofalk, Cortiment, Entocort"
+    },
+    {
+      "code": "Hydrocortison_Colifoam",
+      "display": "Hydrocortison, Colifoam"
+    }
+  ]
+}

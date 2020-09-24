@@ -1,0 +1,305 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/cardio-med-list",
+  "version": "1.0.0",
+  "name": "CardioMedList",
+  "title": "Cardiologische Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Cardiologische Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Benzaperil_Cibacen",
+      "display": "Benzaperil, Cibacen"
+    },
+    {
+      "code": "Captopril_ACE-Hemmer_Captogama_CaptoHexal",
+      "display": "Captopril, ACE-Hemmer, Captogama, CaptoHexal"
+    },
+    {
+      "code": "Cilazapril_Dynorm",
+      "display": "Cilazapril, Dynorm"
+    },
+    {
+      "code": "Enalapril_Benalapril_Corvo_Jutaxan",
+      "display": "Enalapril, Benalapril, Corvo Jutaxan"
+    },
+    {
+      "code": "Lisinopril_Lisidigal_Lisigamma",
+      "display": "Lisinopril, Lisidigal, Lisigamma"
+    },
+    {
+      "code": "Moexipril_Fempress",
+      "display": "Moexipril, Fempress"
+    },
+    {
+      "code": "Ramipril_Delix_Ramilich",
+      "display": "Ramipril, Delix, Ramilich"
+    },
+    {
+      "code": "Zofenopril_Zofenil",
+      "display": "Zofenopril, Zofenil"
+    },
+    {
+      "code": "Trandolapril_Udrik",
+      "display": "Trandolapril, Udrik"
+    },
+    {
+      "code": "Quinapril_Accupro",
+      "display": "Quinapril, Accupro"
+    },
+    {
+      "code": "Fosinopril_Fosinorm_Fosino_Teva",
+      "display": "Fosinopril, Fosinorm, Fosino Teva"
+    },
+    {
+      "code": "Perindopril-Arginin_Conversum_Arginin",
+      "display": "Perindopril-Arginin, Conversum Arginin"
+    },
+    {
+      "code": "Acebutolol_Prent",
+      "display": "Acebutolol, Prent"
+    },
+    {
+      "code": "Atenolol_AteHexal_Juvental_Tenormin",
+      "display": "Atenolol, AteHexal, Juvental, Tenormin"
+    },
+    {
+      "code": "Betaxolol_Kerlone",
+      "display": "Betaxolol, Kerlone"
+    },
+    {
+      "code": "Bisoprolol_Bisobeta_Bisohexal_Concor_Jutabis",
+      "display": "Bisoprolol, Bisobeta, Bisohexal, Concor, Jutabis"
+    },
+    {
+      "code": "Carvedilol_Dilatrend_Querto",
+      "display": "Carvedilol, Dilatrend, Querto"
+    },
+    {
+      "code": "Celiprolol_Celitin_Selectol",
+      "display": "Celiprolol, Celitin, Selectol"
+    },
+    {
+      "code": "Esomolo_Brevibloc_Esmocard",
+      "display": "Esomolo, Brevibloc, Esmocard"
+    },
+    {
+      "code": "Metoprololsuccinat_Belos-Zok_Meto-hexal_meto-Succinat",
+      "display": "Metoprololsuccinat, Belos-Zok, Meto-hexal, meto-Succinat"
+    },
+    {
+      "code": "Metoprololtartrat_Beloc_Jutabloc_Lopresor_Meprolol_MetoHexal_metrapolol",
+      "display": "Metoprololtartrat, Beloc, Jutabloc, Lopresor, Meprolol, MetoHexal, metrapolol"
+    },
+    {
+      "code": "Nebivolol_Nebilet",
+      "display": "Nebivolol, Nebilet"
+    },
+    {
+      "code": "Pindolol_Visken",
+      "display": "Pindolol, Visken"
+    },
+    {
+      "code": "Propranolol_Dociton_Hemangiol_Inderal_Obsidan_Propra-ratioph.",
+      "display": "Propranolol, Dociton, Hemangiol, Inderal, Obsidan, Propra-ratioph."
+    },
+    {
+      "code": "Sotalol_Corsotalol_Rentibloc_SotaHexal_Sotalex",
+      "display": "Sotalol, Corsotalol, Rentibloc, SotaHexal, Sotalex"
+    },
+    {
+      "code": "Azilsartanmedoxomil_Edarbi",
+      "display": "Azilsartanmedoxomil, Edarbi"
+    },
+    {
+      "code": "Candesartan_Amias_Atacand_Blopress_Candesartan_Hexal_Ratacand",
+      "display": "Candesartan, Amias, Atacand, Blopress, Candesartan Hexal, Ratacand"
+    },
+    {
+      "code": "Eprosartan_Teveten_Mono",
+      "display": "Eprosartan, Teveten Mono"
+    },
+    {
+      "code": "Irbesartan_Aprovel_Geritan_Ifirmasta_Irbesartan_Karvea",
+      "display": "Irbesartan, Aprovel, Geritan, Ifirmasta, Irbesartan, Karvea"
+    },
+    {
+      "code": "Losartan_Cfozaar_Lorzaar_Losar-Q_Losar_Teva",
+      "display": "Losartan, Cfozaar, Lorzaar, Losar-Q, Losar Teva"
+    },
+    {
+      "code": "Olmesartan_Belsar_Ometec_Votum",
+      "display": "Olmesartan, Belsar, Ometec, Votum"
+    },
+    {
+      "code": "Telmisartan_Kinzal_mono_Micardis_Pritor_Tolura",
+      "display": "Telmisartan, Kinzal mono, Micardis, Pritor, Tolura"
+    },
+    {
+      "code": "Valsartan_Cordinate_Diovan_Povas_Valsacor",
+      "display": "Valsartan, Cordinate, Diovan, Povas, Valsacor"
+    },
+    {
+      "code": "Furosemid_Furanthril_Furorese_Lusid_Lasix",
+      "display": "Furosemid, Furanthril, Furorese, Lusid, Lasix"
+    },
+    {
+      "code": "Fpiretanid_Arelix_Piretanid",
+      "display": "Fpiretanid, Arelix, Piretanid"
+    },
+    {
+      "code": "Torasemid_Toragamma_Torem_Unat_",
+      "display": "Torasemid, Toragamma, Torem, Unat,"
+    },
+    {
+      "code": "Bemetizid",
+      "display": "Bemetizid"
+    },
+    {
+      "code": "Bendroflumethiazid",
+      "display": "Bendroflumethiazid"
+    },
+    {
+      "code": "Chlortalidon_Hygroton",
+      "display": "Chlortalidon, Hygroton"
+    },
+    {
+      "code": "Clopamid",
+      "display": "Clopamid"
+    },
+    {
+      "code": "Hydrochlorothiazid_Disalunil_Esidrix_HCT",
+      "display": "Hydrochlorothiazid, Disalunil, Esidrix, HCT"
+    },
+    {
+      "code": "Indapamid_Natrilix",
+      "display": "Indapamid, Natrilix"
+    },
+    {
+      "code": "Mefrusid",
+      "display": "Mefrusid"
+    },
+    {
+      "code": "Xipamid_Aquaphor",
+      "display": "Xipamid, Aquaphor"
+    },
+    {
+      "code": "Amilorid",
+      "display": "Amilorid"
+    },
+    {
+      "code": "Teiamteren",
+      "display": "Teiamteren"
+    },
+    {
+      "code": "Eplerenon_Elecor_Epleren_Inspra",
+      "display": "Eplerenon, Elecor, Epleren, Inspra"
+    },
+    {
+      "code": "Kalimcanrenoat_Aldactone",
+      "display": "Kalimcanrenoat, Aldactone"
+    },
+    {
+      "code": "Spironolacton_Aldactone_Jenaspiron_Osyrol_Spiro-CT",
+      "display": "Spironolacton, Aldactone, Jenaspiron, Osyrol, Spiro-CT"
+    },
+    {
+      "code": "Mannitol_Deltamannit_Mannit_Mannitol_Osmofundin_Osmosteril",
+      "display": "Mannitol, Deltamannit, Mannit, Mannitol, Osmofundin, Osmosteril"
+    },
+    {
+      "code": "Amlopidin_Amlobesilat_Amparo_Norvasc",
+      "display": "Amlopidin, Amlobesilat, Amparo, Norvasc"
+    },
+    {
+      "code": "Ispradipin_Lomir_Sro_Vascal_uno",
+      "display": "Ispradipin, Lomir Sro, Vascal uno"
+    },
+    {
+      "code": "Lercanidipin_Carmen_Corifeo",
+      "display": "Lercanidipin, Carmen, Corifeo"
+    },
+    {
+      "code": "Manidipin_Manyper",
+      "display": "Manidipin, Manyper"
+    },
+    {
+      "code": "Nitrendipin_Esocr_Nivadil",
+      "display": "Nitrendipin, Esocr, Nivadil"
+    },
+    {
+      "code": "Nifedipin_Adalat_Aprical_NifeHexal_Nifical",
+      "display": "Nifedipin, Adalat, Aprical, NifeHexal, Nifical"
+    },
+    {
+      "code": "Felodipin_Felocor_Modip",
+      "display": "Felodipin, Felocor, Modip"
+    },
+    {
+      "code": "Ivabradin_Procoralan",
+      "display": "Ivabradin, Procoralan"
+    },
+    {
+      "code": "Implicor",
+      "display": "Implicor"
+    },
+    {
+      "code": "Glyceroltrinitrat_Gallolingual_Minitrans_Nitro_Carino_Nitroderm_Nitrolingual",
+      "display": "Glyceroltrinitrat, Gallolingual, Minitrans, Nitro Carino, Nitroderm, Nitrolingual"
+    },
+    {
+      "code": "Isosorbidmononitrat_IS5_ISMN_Ismo_Isomonit_Mono-Mack_Depot",
+      "display": "Isosorbidmononitrat, IS5, ISMN, Ismo, Isomonit, Mono-Mack Depot"
+    },
+    {
+      "code": "Moslidomin_Corvaton_MolsiHexal",
+      "display": "Moslidomin, Corvaton, MolsiHexal"
+    },
+    {
+      "code": "Trapidil_Rocornal",
+      "display": "Trapidil, Rocornal"
+    },
+    {
+      "code": "Digoxin_Digacin_Lanicor_Lenoxin",
+      "display": "Digoxin, Digacin, Lanicor, Lenoxin"
+    },
+    {
+      "code": "Digitoxin_Digimed_Digimerck",
+      "display": "Digitoxin, Digimed, Digimerck"
+    },
+    {
+      "code": "Beta-Acetyldigoxin_Beta-Acetyl_Novodigal",
+      "display": "Beta-Acetyldigoxin, Beta-Acetyl, Novodigal"
+    },
+    {
+      "code": "Metildigoxin_Lanitop",
+      "display": "Metildigoxin, Lanitop"
+    }
+  ]
+}

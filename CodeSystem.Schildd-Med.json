@@ -1,0 +1,77 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/schildd-med-list",
+  "version": "1.0.0",
+  "name": "SchilddMedList",
+  "title": "Schilddrüsen-Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Schilddrüsen-Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Levothyroxin_(T4)_Berlthyrox_Eferox_Euthyrox_L-Thyrox_Hexal_L-Thyroxin_inject_L-Thyroxi-na_ratioph._Thevier",
+      "display": "Levothyroxin (T4), Berlthyrox, Eferox, Euthyrox, L-Thyrox Hexal, L-Thyroxin inject, L-Thyroxi-na ratioph., Thevier"
+    },
+    {
+      "code": "Liothyronin_(T3)_Thybon_Thyrotardin-inject",
+      "display": "Liothyronin (T3), Thybon, Thyrotardin-inject"
+    },
+    {
+      "code": "Novothyral_Prothyrid",
+      "display": "Novothyral, Prothyrid"
+    },
+    {
+      "code": "Eferox-Jod__Jodthyrox_L-Thyrox_Jod_Hexal_Thyronajod",
+      "display": "Eferox-Jod,  Jodthyrox, L-Thyrox Jod Hexal, Thyronajod"
+    },
+    {
+      "code": "Carbimazol_Carbimazol_Aristo/_Henning_/_Hexal",
+      "display": "Carbimazol, Carbimazol Aristo/ Henning / Hexal"
+    },
+    {
+      "code": "Prophylthiouracil_Prohycil",
+      "display": "Prophylthiouracil, Prohycil"
+    },
+    {
+      "code": "Thiamazol_Favistan_Methizol_Thiamazol_henning/_Hexal_Thyrozol",
+      "display": "Thiamazol, Favistan, Methizol, Thiamazol henning/ Hexal, Thyrozol"
+    },
+    {
+      "code": "Natriumperchlorat_Irenat",
+      "display": "Natriumperchlorat, Irenat"
+    },
+    {
+      "code": "Teriparatid_Forsteo",
+      "display": "Teriparatid, Forsteo"
+    },
+    {
+      "code": "Cinacalecet_Mimpara",
+      "display": "Cinacalecet, Mimpara"
+    }
+  ]
+}

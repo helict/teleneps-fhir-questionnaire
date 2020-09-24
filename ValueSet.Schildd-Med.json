@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/ValueSet/schildd-med-list",
+  "version": "1.0.0",
+  "name": "SchilddMedList",
+  "title": "Schilddrüsen-Medikamentenliste",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "description": "Schilddrüsen-Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "compose": {
+    "include": [
+      {
+        "system": "http://teleneps.de/fhir/CodeSystem/schildd-med-list"
+      }
+    ]
+  }
+}

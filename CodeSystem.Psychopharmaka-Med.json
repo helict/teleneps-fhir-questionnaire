@@ -1,0 +1,437 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/CodeSystem/psychopharmaka-med-list",
+  "version": "1.0.0",
+  "name": "PsychopharmakaMedList",
+  "title": "Psychopharmaka-Medikamentenliste",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Psychopharmaka-Medikamentenliste zur Abfrage im Eingangsfragebogen",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Aripiprazol_Abilify_Alcartis_Arileto_AripiHexal_Aripilif_Aripipan_Arpoya_Lemilvo",
+      "display": "Aripiprazol, Abilify, Alcartis , Arileto, AripiHexal, Aripilif, Aripipan, Arpoya, Lemilvo"
+    },
+    {
+      "code": "Loxapin_Adasuve",
+      "display": "Loxapin, Adasuve"
+    },
+    {
+      "code": "Risperidon_Aleptan_Risperdal",
+      "display": "Risperidon, Aleptan, Risperdal"
+    },
+    {
+      "code": "Alfentanil_Rapifen",
+      "display": "Alfentanil, Rapifen"
+    },
+    {
+      "code": "Promethazin_Atosil",
+      "display": "Promethazin, Atosil"
+    },
+    {
+      "code": "Melperon_Buronil",
+      "display": "Melperon, Buronil"
+    },
+    {
+      "code": "Zuclopenthixol_Ciatyl-Z",
+      "display": "Zuclopenthixol, Ciatyl-Z"
+    },
+    {
+      "code": "Clozapin_Leponex",
+      "display": "Clozapin, Leponex"
+    },
+    {
+      "code": "Sulpirid_Dogmatil_Meresa_Meresasul_Sulpivert_Vertigo-Meresa_vertigo-neogama",
+      "display": "Sulpirid, Dogmatil, Meresa, Meresasul, Sulpivert, Vertigo-Meresa, vertigo-neogama"
+    },
+    {
+      "code": "Prothipendyl_Dominal",
+      "display": "Prothipendyl, Dominal"
+    },
+    {
+      "code": "Droperidol_Xomolix",
+      "display": "Droperidol, Xomolix"
+    },
+    {
+      "code": "Tiaprid_Tiapridex_Dystardis",
+      "display": "Tiaprid, Tiapridex, Dystardis"
+    },
+    {
+      "code": "Flupentixol_Fluanxol",
+      "display": "Flupentixol, Fluanxol"
+    },
+    {
+      "code": "Fluphenazin_Lyogen",
+      "display": "Fluphenazin, Lyogen"
+    },
+    {
+      "code": "Benperidol_Glianimon",
+      "display": "Benperidol, Glianimon"
+    },
+    {
+      "code": "Haloperidol_Haldol",
+      "display": "Haloperidol, Haldol"
+    },
+    {
+      "code": "Paliperidon_Invega_Trevicta_Xeplion",
+      "display": "Paliperidon, Invega, Trevicta, Xeplion"
+    },
+    {
+      "code": "Levomepromazin_Neurocil",
+      "display": "Levomepromazin, Neurocil"
+    },
+    {
+      "code": "Thioridazin_Melleril",
+      "display": "Thioridazin, Melleril"
+    },
+    {
+      "code": "Melperon",
+      "display": "Melperon"
+    },
+    {
+      "code": "Tetrabenazin_Nitoman_Tetmodis",
+      "display": "Tetrabenazin, Nitoman, Tetmodis"
+    },
+    {
+      "code": "Olanzapin_Zypadhera_Zyprexa",
+      "display": "Olanzapin, Zypadhera, Zyprexa"
+    },
+    {
+      "code": "Perazin_Taxilan",
+      "display": "Perazin, Taxilan"
+    },
+    {
+      "code": "Pipamperon",
+      "display": "Pipamperon"
+    },
+    {
+      "code": "Quetiapin_Quentiax_Seroquel",
+      "display": "Quetiapin, Quentiax, Seroquel"
+    },
+    {
+      "code": "Cariprazin_Reagila",
+      "display": "Cariprazin, Reagila"
+    },
+    {
+      "code": "Sertindol_Serdolect",
+      "display": "Sertindol, Serdolect"
+    },
+    {
+      "code": "Amisulprid_Solian",
+      "display": "Amisulprid, Solian"
+    },
+    {
+      "code": "Sufentanil_Zalviso",
+      "display": "Sufentanil, Zalviso"
+    },
+    {
+      "code": "Asenapin_Sycrest",
+      "display": "Asenapin, Sycrest"
+    },
+    {
+      "code": "Tiaprid_Dystardis_Tiapridex",
+      "display": "Tiaprid, Dystardis, Tiapridex"
+    },
+    {
+      "code": "Chlorprothixen_Truxal",
+      "display": "Chlorprothixen, Truxal"
+    },
+    {
+      "code": "Sufentanil",
+      "display": "Sufentanil"
+    },
+    {
+      "code": "Ziprasidon_Zeldox",
+      "display": "Ziprasidon, Zeldox"
+    },
+    {
+      "code": "Sertralin_Adjuvin_Seralin_Sertragen_Tresleen_Zoloft",
+      "display": "Sertralin, Adjuvin, Seralin, Sertragen, Tresleen, Zoloft"
+    },
+    {
+      "code": "Agomelatin_Agogerolan_Thymanax_Valdoxan",
+      "display": "Agomelatin, Agogerolan, Thymanax, Valdoxan"
+    },
+    {
+      "code": "Amitriptylinoxid_Amioxid",
+      "display": "Amitriptylinoxid, Amioxid"
+    },
+    {
+      "code": "Amitriptylin_Limbitrol_Saroten_Syneudon",
+      "display": "Amitriptylin, Limbitrol, Saroten, Syneudon"
+    },
+    {
+      "code": "Clomipramin_Anafranil",
+      "display": "Clomipramin, Anafranil"
+    },
+    {
+      "code": "Doxepin_Aponal_Mareen_Sinquan",
+      "display": "Doxepin, Aponal, Mareen, Sinquan"
+    },
+    {
+      "code": "Tryptophan_Ardeydorm_Ardeytropin",
+      "display": "Tryptophan, Ardeydorm, Ardeytropin"
+    },
+    {
+      "code": "Atomoxetin_Atofab_Strattera",
+      "display": "Atomoxetin, Atofab, Strattera"
+    },
+    {
+      "code": "Moclobemid_Aurorix",
+      "display": "Moclobemid, Aurorix"
+    },
+    {
+      "code": "Vortioxetin_Brintellix",
+      "display": "Vortioxetin, Brintellix"
+    },
+    {
+      "code": "Bupropion_Elontril_Zyban",
+      "display": "Bupropion, Elontril, Zyban"
+    },
+    {
+      "code": "Escitalopram_Cipralex",
+      "display": "Escitalopram, Cipralex"
+    },
+    {
+      "code": "Citalopram_Cipramil_Citalon",
+      "display": "Citalopram, Cipramil, Citalon"
+    },
+    {
+      "code": "Duloxetin_Cymbalta_Duloxalta_DuloxeHexal_Yentreve",
+      "display": "Duloxetin, Cymbalta, Duloxalta, DuloxeHexal, Yentreve"
+    },
+    {
+      "code": "Reboxetin_Solvex",
+      "display": "Reboxetin, Solvex"
+    },
+    {
+      "code": "Fluvoxamin_Fevarin",
+      "display": "Fluvoxamin, Fevarin"
+    },
+    {
+      "code": "Fluoxetin",
+      "display": "Fluoxetin"
+    },
+    {
+      "code": "Imipramin_Stangyl",
+      "display": "Imipramin, Stangyl"
+    },
+    {
+      "code": "Maprotilin_Ludiomil",
+      "display": "Maprotilin, Ludiomil"
+    },
+    {
+      "code": "Milnacipran",
+      "display": "Milnacipran"
+    },
+    {
+      "code": "Mirtazapin_Mirtagamma_Mirtaron_Mirtazap_Mirtazelon",
+      "display": "Mirtazapin, Mirtagamma, Mirtaron, Mirtazap, Mirtazelon"
+    },
+    {
+      "code": "Nortriptylin_Nortrilen",
+      "display": "Nortriptylin, Nortrilen"
+    },
+    {
+      "code": "Opipramol_Opipram_Opipramol",
+      "display": "Opipramol, Opipram, Opipramol"
+    },
+    {
+      "code": "Paroxetin_Seroxat",
+      "display": "Paroxetin, Seroxat"
+    },
+    {
+      "code": "Trimipramin_Stangyl",
+      "display": "Trimipramin, Stangyl"
+    },
+    {
+      "code": "Tianeptin_Tianeurax",
+      "display": "Tianeptin, Tianeurax"
+    },
+    {
+      "code": "Trazodon",
+      "display": "Trazodon"
+    },
+    {
+      "code": "Oxazepam_Adumbran_Anxiolit_Oxa_Praxiten_Seresta",
+      "display": "Oxazepam, Adumbran, Anxiolit, Oxa, Praxiten, Seresta"
+    },
+    {
+      "code": "Alprazolam_Alprastad_Tafil_Xanax_Xanor",
+      "display": "Alprazolam, Alprastad, Tafil, Xanax, Xanor"
+    },
+    {
+      "code": "Clonazepam_Antelepsin_Rivotril",
+      "display": "Clonazepam, Antelepsin, Rivotril"
+    },
+    {
+      "code": "Buspiron_Anxut",
+      "display": "Buspiron, Anxut"
+    },
+    {
+      "code": "Dexamfetaminm_Attentin",
+      "display": "Dexamfetaminm, Attentin"
+    },
+    {
+      "code": "Zolpidem_Bikalm_Edluar_Ivadal_Mondeal_Stilnox",
+      "display": "Zolpidem, Bikalm, Edluar, Ivadal, Mondeal, Stilnox"
+    },
+    {
+      "code": "Bromazepam_Lexotanil_Normoc_Bromazep",
+      "display": "Bromazepam, Lexotanil, Normoc, Bromazep"
+    },
+    {
+      "code": "Midazolam_Buccolam_Dormicum",
+      "display": "Midazolam, Buccolam, Dormicum"
+    },
+    {
+      "code": "Flurazepam_Dalmadorm_Staurodorm",
+      "display": "Flurazepam, Dalmadorm, Staurodorm"
+    },
+    {
+      "code": "Prazepam_Demetrin_Mono_Demetrin",
+      "display": "Prazepam, Demetrin, Mono Demetrin"
+    },
+    {
+      "code": "Diazepam_Valocordin",
+      "display": "Diazepam, Valocordin"
+    },
+    {
+      "code": "Clomethiazol_Distraneurin",
+      "display": "Clomethiazol, Distraneurin"
+    },
+    {
+      "code": "Midazolam_Dormicum_Buccolam",
+      "display": "Midazolam, Dormicum, Buccolam"
+    },
+    {
+      "code": "Nitrazepam_Eatan_Mogadan_Novanox",
+      "display": "Nitrazepam, Eatan, Mogadan, Novanox"
+    },
+    {
+      "code": "Clobazam_Frisium",
+      "display": "Clobazam, Frisium"
+    },
+    {
+      "code": "Triazolam_Halcion",
+      "display": "Triazolam, Halcion"
+    },
+    {
+      "code": "Brotizolam_Lendormin",
+      "display": "Brotizolam, Lendormin"
+    },
+    {
+      "code": "Chlordiazepoxid_Librium",
+      "display": "Chlordiazepoxid, Librium"
+    },
+    {
+      "code": "Lorazepam_Tavor_Tolid",
+      "display": "Lorazepam, Tavor, Tolid"
+    },
+    {
+      "code": "Lormetazepam_Loretam_Sedalam",
+      "display": "Lormetazepam, Loretam, Sedalam"
+    },
+    {
+      "code": "Temazepam_Planum_Remestan_Temazep",
+      "display": "Temazepam, Planum, Remestan, Temazep"
+    },
+    {
+      "code": "Flunitrazepam_Rohypnol",
+      "display": "Flunitrazepam, Rohypnol"
+    },
+    {
+      "code": "Medazepam_Rudotel",
+      "display": "Medazepam, Rudotel"
+    },
+    {
+      "code": "Zopiclon_Somnosan_Optidorm_Ximovan",
+      "display": "Zopiclon, Somnosan, Optidorm, Ximovan"
+    },
+    {
+      "code": "Dikaliumclorazepat_Tranxilium",
+      "display": "Dikaliumclorazepat, Tranxilium"
+    },
+    {
+      "code": "Biperiden_Akineton",
+      "display": "Biperiden, Akineton"
+    },
+    {
+      "code": "Aripiprazol",
+      "display": "Aripiprazol"
+    },
+    {
+      "code": "Pregabalin_Algecia_Lyribastad_Lyrica_Pregabador_PregabaHexal_Pregabin_Pregamid",
+      "display": "Pregabalin, Algecia, Lyribastad, Lyrica, Pregabador, PregabaHexal, Pregabin, Pregamid"
+    },
+    {
+      "code": "Oxcarbazepin_Apydan_Timox_Trileptal",
+      "display": "Oxcarbazepin, Apydan, Timox, Trileptal"
+    },
+    {
+      "code": "Amantadin_Amantadinsulfat_Symmetrel",
+      "display": "Amantadin, Amantadinsulfat, Symmetrel"
+    },
+    {
+      "code": "Carbamazepin_Tegretal_Timonil",
+      "display": "Carbamazepin, Tegretal, Timonil"
+    },
+    {
+      "code": "Methylphenidat_Concerta_Equasym_Kinecteen_Medikid_Medikinet_Methylphenidat-hydrochlorid_Ritalin",
+      "display": "Methylphenidat, Concerta,, Equasym, Kinecteen, Medikid, Medikinet, Methylphenidat-hydrochlorid, Ritalin"
+    },
+    {
+      "code": "Lisdexamfetamin_Elvanse",
+      "display": "Lisdexamfetamin, Elvanse"
+    },
+    {
+      "code": "Valproinsäure_Ergenyl_Orfiril_Valpro_Valproat",
+      "display": "Valproinsäure, Ergenyl, Orfiril, Valpro, Valproat"
+    },
+    {
+      "code": "Lithium_Hypnorex_Lithiofor_Quilonum",
+      "display": "Lithium, Hypnorex, Lithiofor, Quilonum"
+    },
+    {
+      "code": "Guanfacin_Intuniv",
+      "display": "Guanfacin, Intuniv"
+    },
+    {
+      "code": "Lamotrigin_Lamictal",
+      "display": "Lamotrigin, Lamictal"
+    },
+    {
+      "code": "Procyclidin_Osnervan",
+      "display": "Procyclidin , Osnervan"
+    },
+    {
+      "code": "Bornaprin_Sormodren",
+      "display": "Bornaprin, Sormodren"
+    }
+  ]
+}
