@@ -1,0 +1,144 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/ValueSet/vorerkrankungen",
+  "version": "1.0.0",
+  "name": "Vorerkrankungen",
+  "title": "Liste möglicher Vorerkrankungen",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Mögliche Vorerkrankungen zur Abfrage im Eingangsfragebogen",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+        "concept": [
+          {
+            "code": "T88",
+            "display": "Allergie "
+          },
+          {
+            "code": "G40",
+            "display": "Anfallsleiden (Epilepsie)"
+          },
+          {
+            "code": "J44",
+            "display": "Atemwegserkrankung"
+          },
+          {
+            "code": "N32.9",
+            "display": "Blasenerkrankung"
+          },
+          {
+            "code": "D68",
+            "display": "Blutgerinnungsstörung "
+          },
+          {
+            "code": "E14",
+            "display": "Diabetes"
+          },
+          {
+            "code": "K83",
+            "display": "Gallenerkrankung"
+          },
+          {
+            "code": "H40",
+            "display": "Glaukom "
+          },
+          {
+            "code": "D75",
+            "display": "Hämatologische Erkrankung"
+          },
+          {
+            "code": "L98",
+            "display": "Hauterkrankung"
+          },
+          {
+            "code": "I99",
+            "display": "Herz-Kreislauf-Erkrankung "
+          },
+          {
+            "code": "A37",
+            "display": "Keuchhusten"
+          },
+          {
+            "code": "K76",
+            "display": "Lebererkrankung"
+          },
+          {
+            "code": "K52.9",
+            "display": "Magen-Darm-Erkrankung"
+          },
+          {
+            "code": "B05",
+            "display": "Masern"
+          },
+          {
+            "code": "B26",
+            "display": "Mumps"
+          },
+          {
+            "code": "N28.9",
+            "display": "Nierenerkrankung"
+          },
+          {
+            "code": "M85.9",
+            "display": "Osteoporose"
+          },
+          {
+            "code": "M06",
+            "display": "Rheuma"
+          },
+          {
+            "code": "B06",
+            "display": "Röteln "
+          },
+          {
+            "code": "E07.9",
+            "display": "Schilddrüse"
+          },
+          {
+            "code": "C80",
+            "display": "Tumorerkrankung"
+          },
+          {
+            "code": "B01",
+            "display": "Windpocken"
+          },
+          {
+            "system": "http://loinc.org",
+            "concept": [
+              {
+                "code": "LA46-8",
+                "display": "Sonstige"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

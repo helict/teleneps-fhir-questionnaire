@@ -1,0 +1,75 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/ValueSet/herz-kreislauf-erkrankungen",
+  "version": "1.0.0",
+  "name": "HerzKreislaufErkrankungen",
+  "title": "Liste möglicher Herz-Kreislauf-Erkrankungen",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Mögliche Herz-Keislauf-Erkrankungen zur Abfrage im Eingangsfragebogen",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+        "concept": [
+          {
+            "code": "I50",
+            "display": "Herzinsuffizienz"
+          },
+          {
+            "code": "I25",
+            "display": "Koronare Herzkrankheit"
+          },
+          {
+            "code": "I21",
+            "display": "Herzinfarkt"
+          },
+          {
+            "code": "I49",
+            "display": "Herzrhythmusstörungen"
+          },
+          {
+            "code": "Z95",
+            "display": "Herzschrittmacher"
+          },
+          {
+            "code": "Z95.2",
+            "display": "Herzklappenfehler/-ersatz"
+          },
+          {
+            "code": "I10",
+            "display": "Hypertonie (Bluthochdruck)"
+          },
+          {
+            "code": "I63",
+            "display": "Mangeldurchblutung des ZNS/Apoplex"
+          }
+        ]
+      }
+    ]
+  }
+}
