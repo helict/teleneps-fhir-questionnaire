@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "url": "http://teleneps.de/fhir/ValueSet/geschlecht",
+  "version": "1.0.0",
+  "name": "Geschlecht",
+  "title": "Geschlechter inkl. divers",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "description": "Geschlechter zur Abfrage im Eingangsfragebogen",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/gender-amtlich-de"
+      },
+      {
+        "system": "http://hl7.org/fhir/administrative-gender"
+      }
+    ]
+  }
+}
