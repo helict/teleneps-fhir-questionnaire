@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://loinc.org/vs/LL2184-1",
+  "identifier": [ {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:oid:1.3.6.1.4.1.12009.10.1.1339"
+  } ],
+  "version": "Loinc_2.68",
+  "name": "SAMHSA-control worrying",
+  "status": "active",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "LA6568-5",
+        "display": "Not at all",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "Überhaupt nicht"
+          }
+        ]
+      }, {
+        "code": "LA6569-3",
+        "display": "Several days",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "Mehrere Tage"
+          }
+        ]
+      }, {
+        "code": "LA18938-3",
+        "display": "More days than not",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "Mehr Tage als gar nicht"
+          }
+        ]
+      }, {
+        "code": "LA6571-9",
+        "display": "Nearly every day",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "Fast jeden Tag"
+          }
+        ]
+      } ]
+    } ]
+  }
+}

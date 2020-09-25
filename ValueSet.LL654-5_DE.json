@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://loinc.org/vs/LL654-5",
+  "identifier": [ {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:oid:1.3.6.1.4.1.12009.10.1.37"
+  } ],
+  "version": "Loinc_2.68",
+  "name": "MDSv3_D0200A2",
+  "status": "active",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "LA10997-7",
+        "display": "Never or 1 day",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "Nie oder 1 Tag"
+          }
+        ]
+      }, {
+        "code": "LA10998-5",
+        "display": "2-6 days (several days)",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "2-6 Tagen (mehrere Tage)"
+          }
+        ]
+      }, {
+        "code": "LA10999-3",
+        "display": "7-11 days (half or more of the days)",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "7-11 Tage (mehr als die Hälfte der Tage)"
+          }
+        ]
+      }, {
+        "code": "LA11000-9",
+        "display": "12-14 days (nearly every day)",
+        "designation": [
+          {
+            "language": "de-DE",
+            "value": "12-14 Tage (fast jeden Tag)"
+          }
+        ]
+      } ]
+    } ]
+  }
+}
