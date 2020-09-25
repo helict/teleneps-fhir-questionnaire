@@ -1,0 +1,1520 @@
+{
+  "resourceType": "Questionnaire",
+  "url": "http://teleneps.de/fhir/Questionnaire/eingangsfragebogen",
+  "version": "1.0.0",
+  "name": "Eingangsfragebogen",
+  "title": "Eingangsfragebogen Tele-NePS",
+  "status": "draft",
+  "experimental": false,
+  "subjectType": [
+    "Patient"
+  ],
+  "publisher": "Telemedizinisches Netzwerk Psychotraumatologie Sachsen (Tele-NePS)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.telehealth-ostsachsen.de/projekte/tele-neps"
+        },
+        {
+          "system": "phone",
+          "value": "+49 351 458 6726"
+        },
+        {
+          "system": "fax",
+          "value": "+49 351 458 7211"
+        }
+      ]
+    }
+  ],
+  "description": "Eingangsfragebogen im Rahmen der Anamnese zur Erstbefragung von Patient*innen",
+  "item": [
+    {
+      "linkId": "0.1",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "45392-8"
+        }
+      ],
+      "text": "Vorname",
+      "type": "string",
+      "required": true,
+      "repeats": false
+    },
+    {
+      "linkId": "0.2",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "45394-4"
+        }
+      ],
+      "text": "Nachname",
+      "type": "string",
+      "required": true,
+      "repeats": false
+    },
+    {
+      "linkId": "0.3",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "21612-7"
+        }
+      ],
+      "text": "Alter (Jahre)",
+      "type": "integer",
+      "required": true,
+      "repeats": false,
+        "extension": [
+          {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+          }
+        ]
+      },
+      {
+        "linkId": "0.4",
+        "text": "Geschlecht",
+        "type": "choice",
+        "required": true,
+        "repeats": false,
+        "answerValueSet": "http://teleneps.de/fhir/ValueSet/geschlecht"
+      },
+      {
+        "linkId": "0.5",
+        "text": "Nationalität",
+        "type": "choice",
+        "required": true,
+        "repeats": false,
+        "answerValueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+      },
+      {
+        "linkId": "0.6",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "8302-2"
+          }
+        ],
+        "text": "Körpergröße",
+        "type": "integer",
+        "required": true,
+        "repeats": false,
+        "extension": [
+          {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "cm"
+              }
+          }
+        ]
+      },
+      {
+        "linkId": "0.7",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "29463-7"
+          }
+        ],
+        "text": "Körpergewicht",
+        "type": "integer",
+        "required": true,
+        "repeats": false,
+        "extension": [
+          {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "kg",
+                "display": "kg"
+              }
+          }
+        ]
+      },
+      {
+        "linkId": "0.8",
+        "text": "Letzte (oder zuletzt ausgeübte) berufliche Tätigkeit?",
+        "type": "string",
+        "required": true,
+        "repeats": false
+      },
+      {
+        "linkId": "0.9",
+        "text": "Höchster Ausbildungsabschluss:",
+        "type": "choice",
+        "required": true,
+        "repeats": false,
+        "answerOption": [
+          {
+            "valueString": "noch in Ausbildung"
+          },
+          {
+            "valueString": "Lehre/Fachschule/Meister"
+          },
+          {
+            "valueString": "Fachhochschule/Universität"
+          },
+          {
+            "valueString": "ohne Berufsabschluss"
+          }
+        ]
+      },
+      {
+        "linkId": "1.0",
+        "text": "Nehmen Sie regelmäßig Medikamente ein?",
+        "type": "boolean",
+        "required": true,
+        "repeats": false,
+        "item": [
+          {
+            "linkId": "1.1",
+            "type": "group",
+            "repeats": true,
+            "enableWhen": [
+              {
+                "question": "1.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "1.1.1",
+                "text": "Diabetes Medikamente:",
+                "type": "display"
+              },
+              {
+                "linkId": "1.1.2",
+                "text": "Medikament",
+                "type": "choice",
+                "required": true,
+                "answerValueSet": "http://teleneps.de/fhir/ValueSet/diabetes-med-list"
+              },
+              {
+                "linkId": "1.1.3",
+                "text": "Stärke",
+                "type": "integer"
+              },
+              {
+                "linkId": "1.1.4",
+                "text": "Einheit",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
+              },
+              {
+                "linkId": "1.1.5",
+                "text": "Form",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
+              },
+              {
+                "linkId": "1.1.6",
+                "text": "Wie oft am Tag?",
+                "type": "group",
+                "item": [
+                  {
+                    "linkId": "1.1.6.1",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "MORN"
+                      }
+                    ],
+                    "text": "Morgen",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.1.6.2",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NOON"
+                      }
+                    ],
+                    "text": "Mittag",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.1.6.3",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "EVE"
+                      }
+                    ],
+                    "text": "Abend",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.1.6.4",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NIGHT"
+                      }
+                    ],
+                    "text": "Nacht",
+                    "type": "integer",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "linkId": "1.1.7",
+                "text": "Kommentar",
+                "type": "string",
+                "required": false
+              },
+              {
+                "linkId": "1.1.8",
+                "text": "Bei Bedarf",
+                "type": "boolean",
+                "required": false
+              }
+            ]
+          },
+          {
+            "linkId": "1.2",
+            "type": "group",
+            "repeats": true,
+            "enableWhen": [
+              {
+                "question": "1.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "1.2.1",
+                "text": "Schilddrüsen Medikamente:",
+                "type": "display"
+              },
+              {
+                "linkId": "1.2.2",
+                "text": "Medikament",
+                "type": "choice",
+                "required": true,
+                "answerValueSet": "http://teleneps.de/fhir/ValueSet/schildd-med-list"
+              },
+              {
+                "linkId": "1.2.3",
+                "text": "Stärke",
+                "type": "integer"
+              },
+              {
+                "linkId": "1.2.4",
+                "text": "Einheit",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
+              },
+              {
+                "linkId": "1.2.5",
+                "text": "Form",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
+              },
+              {
+                "linkId": "1.2.6",
+                "text": "Wie oft am Tag?",
+                "type": "group",
+                "item": [
+                  {
+                    "linkId": "1.2.6.1",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "MORN"
+                      }
+                    ],
+                    "text": "Morgen",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.2.6.2",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NOON"
+                      }
+                    ],
+                    "text": "Mittag",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.2.6.3",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "EVE"
+                      }
+                    ],
+                    "text": "Abend",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.2.6.4",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NIGHT"
+                      }
+                    ],
+                    "text": "Nacht",
+                    "type": "integer",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "linkId": "1.2.7",
+                "text": "Kommentar",
+                "type": "string",
+                "required": false
+              },
+              {
+                "linkId": "1.2.8",
+                "text": "Bei Bedarf",
+                "type": "boolean",
+                "required": false
+              }
+            ]
+          },
+          {
+            "linkId": "1.3",
+            "type": "group",
+            "repeats": true,
+            "enableWhen": [
+              {
+                "question": "1.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "1.3.1",
+                "text": "Rheuma-Medikamente:",
+                "type": "display"
+              },
+              {
+                "linkId": "1.3.2",
+                "text": "Medikament",
+                "type": "choice",
+                "required": true,
+                "answerValueSet": "http://teleneps.de/fhir/ValueSet/rheuma-med-list"
+              },
+              {
+                "linkId": "1.3.3",
+                "text": "Stärke",
+                "type": "integer"
+              },
+              {
+                "linkId": "1.3.4",
+                "text": "Einheit",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
+              },
+              {
+                "linkId": "1.3.5",
+                "text": "Form",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
+              },
+              {
+                "linkId": "1.3.6",
+                "text": "Wie oft am Tag?",
+                "type": "group",
+                "item": [
+                  {
+                    "linkId": "1.3.6.1",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "MORN"
+                      }
+                    ],
+                    "text": "Morgen",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.3.6.2",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NOON"
+                      }
+                    ],
+                    "text": "Mittag",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.3.6.3",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "EVE"
+                      }
+                    ],
+                    "text": "Abend",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.3.6.4",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NIGHT"
+                      }
+                    ],
+                    "text": "Nacht",
+                    "type": "integer",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "linkId": "1.3.7",
+                "text": "Kommentar",
+                "type": "string",
+                "required": false
+              },
+              {
+                "linkId": "1.3.8",
+                "text": "Bei Bedarf",
+                "type": "boolean",
+                "required": false
+              }
+            ]
+          },
+          {
+            "linkId": "1.4",
+            "type": "group",
+            "repeats": true,
+            "enableWhen": [
+              {
+                "question": "1.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "1.4.1",
+                "text": "Allergie- und Asthma-Medikamente:",
+                "type": "display"
+              },
+              {
+                "linkId": "1.4.2",
+                "text": "Medikament",
+                "type": "choice",
+                "required": true,
+                "answerValueSet": "http://teleneps.de/fhir/ValueSet/allergie-asthma-med-list"
+              },
+              {
+                "linkId": "1.4.3",
+                "text": "Stärke",
+                "type": "integer"
+              },
+              {
+                "linkId": "1.4.4",
+                "text": "Einheit",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
+              },
+              {
+                "linkId": "1.4.5",
+                "text": "Form",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
+              },
+              {
+                "linkId": "1.4.6",
+                "text": "Wie oft am Tag?",
+                "type": "group",
+                "item": [
+                  {
+                    "linkId": "1.4.6.1",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "MORN"
+                      }
+                    ],
+                    "text": "Morgen",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.4.6.2",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NOON"
+                      }
+                    ],
+                    "text": "Mittag",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.4.6.3",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "EVE"
+                      }
+                    ],
+                    "text": "Abend",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.4.6.4",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NIGHT"
+                      }
+                    ],
+                    "text": "Nacht",
+                    "type": "integer",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "linkId": "1.4.7",
+                "text": "Kommentar",
+                "type": "string",
+                "required": false
+              },
+              {
+                "linkId": "1.4.8",
+                "text": "Bei Bedarf",
+                "type": "boolean",
+                "required": false
+              }
+            ]
+          },
+          {
+            "linkId": "1.5",
+            "type": "group",
+            "repeats": true,
+            "enableWhen": [
+              {
+                "question": "1.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "1.5.1",
+                "text": "Magen-Darm-Medikamente:",
+                "type": "display"
+              },
+              {
+                "linkId": "1.5.2",
+                "text": "Medikament",
+                "type": "choice",
+                "required": true,
+                "answerValueSet": "http://teleneps.de/fhir/ValueSet/magen-darm-med-list"
+              },
+              {
+                "linkId": "1.5.3",
+                "text": "Stärke",
+                "type": "integer"
+              },
+              {
+                "linkId": "1.5.4",
+                "text": "Einheit",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
+              },
+              {
+                "linkId": "1.5.5",
+                "text": "Form",
+                "type": "choice",
+                "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
+              },
+              {
+                "linkId": "1.5.6",
+                "text": "Wie oft am Tag?",
+                "type": "group",
+                "item": [
+                  {
+                    "linkId": "1.5.6.1",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "MORN"
+                      }
+                    ],
+                    "text": "Morgen",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.5.6.2",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NOON"
+                      }
+                    ],
+                    "text": "Mittag",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.5.6.3",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "EVE"
+                      }
+                    ],
+                    "text": "Abend",
+                    "type": "integer",
+                    "required": true
+                  },
+                  {
+                    "linkId": "1.5.6.4",
+                    "code": [
+                      {
+                        "system": "http://hl7.org/fhir/event-timing",
+                        "code": "NIGHT"
+                      }
+                    ],
+                    "text": "Nacht",
+                    "type": "integer",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "linkId": "1.5.7",
+                "text": "Kommentar",
+                "type": "string",
+                "required": false
+              },
+              {
+                "linkId": "1.5.8",
+                "text": "Bei Bedarf",
+                "type": "boolean",
+                "required": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "2.0",
+        "text": "Hatten Sie Erkrankungen oder Klinikaufenthalte während der Kindheit, Jugend- und Erwachsenzeit?",
+        "type": "boolean",
+        "required": true,
+        "repeats": false,
+        "item": [
+          {
+            "linkId": "2.0.1",
+            "type": "group",
+            "repeats": true,
+            "enableWhen": [
+              {
+                "question": "2.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "2.0.1.1",
+                "text": "Welche Krankheit?",
+                "type": "choice",
+                "answerValueSet": "http://teleneps.de/fhir/ValueSet/vorerkrankungen",
+                "required": true
+              },
+              {
+                "linkId": "2.0.1.2",
+                "text": "Welche Allergie?",
+                "type": "string",
+                "required": true,
+                "enableWhen": [
+                  {
+                    "question": "2.0.1.1",
+                    "operator": "=",
+                    "answerCoding": {
+                      "code": "T88",
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "2.0.1.3",
+                "text": "Welche Atemwegserkrankung?",
+                "type": "string",
+                "required": true,
+                "enableWhen": [
+                  {
+                    "question": "2.0.1.1",
+                    "operator": "=",
+                    "answerCoding": {
+                      "code": "J44",
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "2.0.1.4",
+                "text": "Welche andere Erkrankung?",
+                "type": "string",
+                "required": true,
+                "enableWhen": [
+                  {
+                    "question": "2.0.1.1",
+                    "operator": "=",
+                    "answerCoding": {
+                      "code": "LA46-8",
+                      "system": "http://loinc.org"
+
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "2.0.1.5",
+                "text": "Welcher Diabetestyp?",
+                "type": "choice",
+                "required": true,
+                "answerOption": [
+                  {
+                    "valueCoding":  {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "E10",
+                      "display": "Diabetes mellitus, Typ 1"
+                    }
+                  },
+                  {
+                    "valueCoding":  {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "E11",
+                      "display": "Diabetes mellitus, Typ 2"
+                    }
+                  }
+                ],
+                "enableWhen": [
+                  {
+                    "question": "2.0.1.1",
+                    "operator": "=",
+                    "answerCoding": {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "E14"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "2.0.1.6",
+                "text": "Welche Herz-Kreislauf-Erkrankung?",
+                "type": "choice",
+                "required": true,
+                "answerValueSet": "http://teleneps.de/fhir/ValueSet/herz-kreislauf-erkrankungen",
+                "enableWhen": [
+                  {
+                    "question": "2.0.1.1",
+                    "operator": "=",
+                    "answerCoding": {
+                      "code": "I99",
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "2.0.1.7",
+                "text": "In welchem Alter? (Jahre)",
+                "type": "integer",
+                "required": true,
+                "extension": [
+                  {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "a"
+                      }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "3.0",
+        "text": "Haben Sie eine dieser Infektionskrankheiten?",
+        "type": "group",
+        "required": true,
+        "item": [
+          {
+            "linkId": "3.1",
+            "text": "Hepatitis",
+            "type": "boolean",
+            "required": true,
+            "repeats": false,
+            "code": [
+              {
+                "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                "code": "B19"
+              }
+            ]
+          },
+          {
+            "linkId": "3.2",
+            "text": "AIDS",
+            "type": "boolean",
+            "required": true,
+            "repeats": false,
+            "code": [
+              {
+                "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                "code": "B24"
+              }
+            ]
+          },
+          {
+            "linkId": "3.3",
+            "text": "Tuberkulose",
+            "type": "boolean",
+            "required": true,
+            "repeats": false,
+            "code": [
+              {
+                "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                "code": "A15"
+              }
+            ]
+          },
+          {
+            "linkId": "3.4",
+            "text": "Andere:",
+            "type": "boolean",
+            "required": true,
+            "repeats": true,
+            "item": [
+              {
+                "linkId": "3.4.1",
+                "text": "Welche Infektionskrankheit?",
+                "type": "string",
+                "required": true,
+                "code": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                    "code": "B99"
+                  }
+                ],
+                "enableWhen": [
+                  {
+                    "question": "3.4",
+                    "operator": "=",
+                    "answerBoolean": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "4.0",
+        "text": "Hatten Sie eine, oder mehrere Geburten?",
+        "type": "boolean",
+        "required": true,
+        "item": [
+          {
+            "linkId": "4.0.1",
+            "text": "Geburt",
+            "type": "group",
+            "required": true,
+            "repeats": true,
+            "enableWhen": [
+              {
+                "question": "4.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "4.0.1.1",
+                "text": "Welches Geburtsjahr?",
+                "type": "string",
+                "required": true
+              },
+              {
+                "linkId": "4.0.1.2",
+                "text": "Wurde eine Zange oder Saugglocke genutzt?",
+                "type": "boolean",
+                "required": true
+              },
+              {
+                "linkId": "4.0.1.3",
+                "text": "Wurde ein Kaiserschnitt vorgenommen?",
+                "type": "boolean",
+                "required": true
+              },
+              {
+                "linkId": "4.0.1.4",
+                "text": "Gab es sonstige Komplikation?",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "5.0",
+        "text": "Hatten Sie Unfälle oder Operationen während der Kindheit, Jugend- und Erwachsenzeit?",
+        "type": "boolean",
+        "required": true,
+        "item": [
+          {
+            "linkId": "5.0.1",
+            "type": "group",
+            "enableWhen": [
+              {
+                "question": "5.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "5.0.1.1",
+                "text": "In welchem Alter?",
+                "type": "integer",
+                "required": true,
+                "extension": [
+                  {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "a"
+                      }
+                  }
+                ]
+              },
+              {
+                "linkId": "5.0.1.2",
+                "text": "Welche Unfälle oder Operationen?",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "6.0",
+        "text": "Bestehen heute noch Beeinträchtigungen, die von früheren Erkrankungen herrühren?",
+        "type": "boolean",
+        "required": true,
+        "repeats": false,
+        "item": [
+          {
+            "linkId": "6.0.1",
+            "type": "group",
+            "enableWhen": [
+              {
+                "question": "6.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "6.0.1.1",
+                "text": "Welche Beeinträchtigungen?",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "7.0",
+        "text": "Waren Sie in den letzten 12 Monaten arbeitsunfähig?",
+        "type": "boolean",
+        "required": true,
+        "repeats": false,
+        "item": [
+          {
+            "linkId": "7.0.1",
+            "type": "group",
+            "enableWhen": [
+              {
+                "question": "7.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "7.0.1.1",
+                "text": "Wie viele Tage insgesamt?",
+                "type": "integer",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "8.0",
+        "text": "Sind Sie aktuell von einem Arzt arbeitsunfähig geschrieben?",
+        "type": "boolean",
+        "required": true,
+        "item": [
+          {
+            "linkId": "8.0.1",
+            "type": "group",
+            "enableWhen": [
+              {
+                "question": "8.0",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "item": [
+              {
+                "linkId": "8.0.1.1",
+                "text": "Von wann (Datum)?",
+                "type": "date",
+                "required": true
+              },
+              {
+                "linkId": "8.0.1.2",
+                "text": "Bis wann (Datum)?",
+                "type": "date",
+                "required": true
+              }
+            ]
+        }
+      ]
+    },
+    {
+      "linkId": "9.0",
+      "text": "Haben Sie (teilweise) EU Rente beantragt oder ist diese bewilligt?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "9.0.1",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "9.0",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "item": [
+            {
+              "linkId": "9.0.1.1",
+              "text": "Wenn bewilligt, ab wann (Datum)?",
+              "type": "date",
+              "required": true
+            },
+            {
+              "linkId": "9.0.1.2",
+              "text": "Wenn bewilligt, bis wann (Datum)?",
+              "type": "date",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "10.0",
+      "text": "Rauchen Sie?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "10.0.1",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "10.0",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "item": [
+            {
+              "linkId": "10.0.1.1",
+              "text": "Wie viele Zigaretten pro Tag?",
+              "type": "integer",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "11.0",
+      "text": "Wie oft trinken Sie Alkohol?",
+      "type": "choice",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "68518-0"
+        }
+      ],
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "http://loinc.org/vs/LL2179-1"
+    },
+    {
+      "linkId": "12.0",
+      "text": "Wenn Sie Alkohol trinken, wie viele Gläser trinken Sie dann üblicherweise an einem Tag? (ein Glas entspricht 0,33 L Bier, 0,25 L Wein/Sekt, 0,02 L Spirituosen)",
+      "type": "choice",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "68519-8"
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "11.0",
+          "operator": "!=",
+          "answerCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6270-8",
+            "display": "Nie"
+          }
+        }
+      ],
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "http://loinc.org/vs/LL2180-9"
+    },
+    {
+      "linkId": "13.0",
+      "text": "Wie oft trinken Sie sechs oder mehr Gläser alkoholischer Getränke bei einer Gelegenheit (z.B. beim Abendessen, auf einer Party)? (ein Glas entspricht 0,33 L Bier, 0,25 L Wein/Sekt, 0,02 L Spirituosen)",
+      "type": "choice",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "68520-6"
+        }
+      ],
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "http://loinc.org/vs/LL2181-7"
+    },
+    {
+      "linkId": "14.0",
+      "text": "Haben Sie in Ihrem Leben schon mehrmals irgendwelche Drogen wie z.B. Haschisch, Ecstasy, Kokain oder Heroin eingenommen?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false
+    },
+    {
+      "linkId": "15.0",
+      "text": "Schildern Sie bitte mit Ihren eigenen Worten den Grund für den Wunsch der Behandlung.",
+      "type": "string",
+      "required": true,
+      "repeats": false
+    },
+    {
+      "linkId": "16.0",
+      "text": "Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt?",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "16.1",
+          "text": "Wenig Interesse oder Freude an Ihren Tätigkeiten",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "54637-4"
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "http://loinc.org/vs/LL654-5"
+        },
+        {
+          "linkId": "16.2",
+          "text": "Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "54639-0"
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "http://loinc.org/vs/LL654-5"
+        },
+        {
+          "linkId": "16.3",
+          "text": "Gedanken, dass Sie lieber tot wären oder sich Leid zufügen möchten",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44260-8"
+            }
+          ],
+          "required": true,
+          "answerValueSet": "http://loinc.org/vs/LL358-3"
+        },
+        {
+          "linkId": "16.4",
+          "text": "Nervosität, Ängstlichkeit oder Anspannung",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "69725-0"
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "http://loinc.org/vs/LL358-3"
+        },
+        {
+          "linkId": "16.5",
+          "text": "Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren",
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "68509-9"
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "http://loinc.org/vs/LL2184-1"
+        }
+      ]
+    },
+    {
+      "linkId": "17.0",
+      "text": "Viele Menschen haben irgendwann einmal in ihrem Leben ein sehr belastendes oder traumatisches Erlebnis oder werden Zeugen eines solchen Ereignisses. Bitte geben Sie für jedes der folgenden Ereignisse an, ob Sie es erlebt haben, entweder persönlich oder als Zeuge. Bitte kreuzen Sie an, wenn dies der Fall war.",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerOption": [
+        {
+          "valueString": "Schwerer Unfall, Feuer, Explosion (z.B. Arbeitsunfall, Verkehrsunfall, usw.)"
+        },
+        {
+          "valueString": "Naturkatastrophe (z.B. Sturm, Überschwemmung, Erdbeben, Lawine, usw.)"
+        },
+        {
+          "valueString": "Gewalttätiger Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht, Stichverletzung, usw.)"
+        },
+        {
+          "valueString": "Gewalttätiger Angriff durch fremde Person (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen usw.)"
+        },
+        {
+          "valueString": "Sexueller Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. Vergewaltigung, Nötigung, usw.)"
+        },
+        {
+          "valueString": "Sexueller Angriff durch fremde Person (z.B. Vergewaltigung, Nötigung, usw.)"
+        },
+        {
+          "valueString": "Kampfeinsatz im Krieg oder Aufenthalt im Kriegsgebiet"
+        },
+        {
+          "valueString": "Sexueller Kontakt im Alter von unter 18 Jahren mit einer Person, die mindestens fünf Jahre älter warn"
+        },
+        {
+          "valueString": "Gefangenschaft (z.B. Geisel, Krieg, usw.)"
+        },
+        {
+          "valueString": "Lebensbedrohliche Krankheit"
+        },
+        {
+          "valueString": "Anderes traumatisches Ereignis"
+        }
+      ]
+    },
+    {
+      "linkId": "18.0",
+      "text": "Beschreiben Sie dieses Ereignis:",
+      "type": "string",
+      "enableWhen": [
+        {
+          "question": "17.0",
+          "operator": "=",
+          "answerString": "Anderes traumatisches Ereignis"
+        }
+      ],
+      "required": true,
+      "repeats": false
+    },
+    {
+      "linkId": "19.0",
+      "text": "TBD Haben Sie mehrmals JA angekreuzt?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "19.0.1",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "19.0",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "item": [
+            {
+              "linkId": "onerousEventNumber",
+              "text": "Welche Nummer hat das Ereignis?",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "linkId": "onerousEvent",
+              "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten:",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "20.0",
+      "text": "Wann ist dieses belastende Ereignis passiert?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerOption": [
+        {
+          "valueString": "vor weniger als 1 Monat"
+        },
+        {
+          "valueString": "vor 1 bis 3 Monaten"
+        },
+        {
+          "valueString": "vor 3 bis 6 Monaten"
+        },
+        {
+          "valueString": "vor 6 Monaten bis 3 Jahren"
+        },
+        {
+          "valueString": "vor 3 bis 5 Jahren"
+        },
+        {
+          "valueString": "vor mehr als 5 Jahren"
+        }
+      ],
+      "item": [
+        {
+          "linkId": "20.1",
+          "text": "In welchem Alter (Jahre)?",
+          "type": "integer",
+          "enableWhen": [
+            {
+              "question": "20.0",
+              "operator": "=",
+              "answerString": "vor mehr als 5 Jahren"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "21.0",
+      "text": "Haben Sie in Ihrem Leben jemals eine Erfahrung gemacht, die so beängstigend, schrecklich oder erschütternd war, dass Sie im letzten Monat...",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "21.1",
+          "text": "Alpträume davon hatten oder daran gedacht haben, wenn Sie es nicht wollten?",
+          "type": "boolean",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "21.2",
+          "text": "Sich sehr bemüht haben, nicht daran zu denken oder sich große Mühe gegeben haben, Situationen zu vermeiden, die Sie daran erinnerten?",
+          "type": "boolean",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "21.3",
+          "text": "Ständig auf der Hut, wachsam oder leicht zu erschrecken waren?",
+          "type": "boolean",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "21.4",
+          "text": "Sich wie abgestumpft gefühlt haben oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
+          "type": "boolean",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "22.0",
+      "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurecht zu kommen:",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerOption": [
+        {
+          "valueString": "Überhaupt nicht erschwert"
+        },
+        {
+          "valueString": "Etwas erschwert"
+        },
+        {
+          "valueString": "Stark erschwert"
+        },
+        {
+          "valueString": "Extrem erschwert"
+        }
+      ]
+    }
+  ]
+}
+
