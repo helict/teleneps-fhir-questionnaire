@@ -5,7 +5,7 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
-  "url": "http://teleneps.de/fhir/CodeSystem/schmerzmittel-med-list",
+  "url": "http://tele-neps.de/fhir/CodeSystem/schmerzmittel-med-list",
   "version": "1.0.0",
   "name": "SchmerzmittelMedList",
   "title": "Schmerzmittel-Medikamentenliste",

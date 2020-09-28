@@ -5,7 +5,7 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
-  "url": "http://teleneps.de/fhir/CodeSystem/allergie-asthma-med-list",
+  "url": "http://tele-neps.de/fhir/CodeSystem/allergie-asthma-med-list",
   "version": "1.0.0",
   "name": "AllergieAsthmaMedList",
   "title": "Allergie- und Asthma-Medikamentenliste",

@@ -5,7 +5,7 @@
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
-  "url": "http://teleneps.de/fhir/ValueSet/geschlecht",
+  "url": "http://tele-neps.de/fhir/ValueSet/geschlecht",
   "version": "1.0.0",
   "name": "Geschlecht",
   "title": "Geschlechter inkl. divers",
