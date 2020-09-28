@@ -1386,7 +1386,7 @@
     },
     {
       "linkId": "19.0",
-      "text": "TBD Haben Sie mehrmals JA angekreuzt?",
+      "text": "Haben Sie mehrmals JA angekreuzt?",
       "type": "boolean",
       "required": true,
       "repeats": false,
@@ -1403,13 +1403,13 @@
           ],
           "item": [
             {
-              "linkId": "onerousEventNumber",
+              "linkId": "19.0.1.1",
               "text": "Welche Nummer hat das Ereignis?",
               "type": "integer",
               "required": true
             },
             {
-              "linkId": "onerousEvent",
+              "linkId": "19.0.1.2",
               "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten:",
               "type": "string",
               "required": true
