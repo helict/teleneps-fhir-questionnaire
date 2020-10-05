@@ -1654,24 +1654,17 @@
     },
     {
       "linkId": "21.0",
-      "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurecht zu kommen",
+          "code" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "69722-7"
+            }
+          ],
+      "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurechtzukommen",
       "type": "choice",
       "required": true,
       "repeats": false,
-      "answerOption": [
-        {
-          "valueString": "Überhaupt nicht erschwert"
-        },
-        {
-          "valueString": "Etwas erschwert"
-        },
-        {
-          "valueString": "Stark erschwert"
-        },
-        {
-          "valueString": "Extrem erschwert"
-        }
-      ]
+      "answerValueSet" : "http://loinc.org/vs/LL359-1"
     }
   ]
 }
