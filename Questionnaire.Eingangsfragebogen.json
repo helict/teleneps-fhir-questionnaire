@@ -1525,14 +1525,14 @@
       ]
     },
     {
-      "linkId": "19.0",
+      "linkId": "20.0",
       "text": "Waren Sie oder haben Sie im vergangenen Monat...",
       "type": "group",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "19.1",
+          "linkId": "20.1",
           "text": "... Alpträume von dem/den Ereignis(sen) gehabt oder dachten Sie an das/die Ereignis(se) wenn Sie es nicht wollten?",
           "prefix" : "1.",
           "type": "boolean",
@@ -1540,7 +1540,7 @@
           "repeats": false
         },
         {
-          "linkId": "19.2",
+          "linkId": "20.2",
           "text": "... sich sehr bemüht nicht an das/die Ereignis(se) zu denken oder sich große Mühe gegeben, Situationen zu vermeiden, die Sie an das/die Ereignis(se) erinnerten?",
           "prefix" : "2.",
           "type": "boolean",
@@ -1548,7 +1548,7 @@
           "repeats": false
         },
         {
-          "linkId": "19.3",
+          "linkId": "20.3",
           "text": "... ständig auf der Hut, wachsam oder leicht zu erschrecken?",
           "prefix" : "3.",
           "type": "boolean",
@@ -1556,7 +1556,7 @@
           "repeats": false
         },
         {
-          "linkId": "19.4",
+          "linkId": "20.4",
           "text": "... sich wie betäubt gefühlt oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
           "prefix" : "4.",
           "type": "boolean",
@@ -1564,7 +1564,7 @@
           "repeats": false
         },
         {
-          "linkId": "19.5",
+          "linkId": "20.5",
           "text": "... sich schuldig gefühlt oder konnten Sie nicht damit aufhören sich oder anderen Vorwürfe wegen des/der Ereignisse(s) zu machen oder wegen irgendwelcher Probleme, die durch das/die Ereignis(se) verursacht sein könnten?",
           "prefix" : "5.",
           "type": "boolean",
@@ -1575,6 +1575,85 @@
     },
     {
       "linkId": "20.0",
+      "text": "Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt?",
+      "type": "group",
+      "required": true,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "20.1",
+          "code" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "44250-9"
+            }
+          ],
+          "text": "wenig Interesse oder Freude an Ihren Tätigkeiten",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet" : "http://loinc.org/vs/LL358-3"
+        },
+        {
+          "linkId": "20.2",
+          "code" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "44255-8"
+            }
+          ],
+          "text": "Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet" : "http://loinc.org/vs/LL358-3"
+        },
+        {
+          "linkId": "20.3",
+          "code" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "44260-8"
+            }
+          ],
+          "text": "Gedanken, dass Sie lieber tot wären oder sich Leid zufügen möchten",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet" : "http://loinc.org/vs/LL358-3"
+        },
+        {
+          "linkId": "20.4",
+          "code" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "69725-0"
+            }
+          ],
+          "text": "Nervosität, Ängstlichkeit oder Anspannung",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet" : "http://loinc.org/vs/LL358-3"
+        },
+        {
+          "linkId": "20.5",
+          "code" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "69733-4"
+            }
+          ],
+          "text": "nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet" : "http://loinc.org/vs/LL358-3"
+        }
+      ]
+    },
+    {
+      "linkId": "21.0",
       "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurecht zu kommen",
       "type": "choice",
       "required": true,
