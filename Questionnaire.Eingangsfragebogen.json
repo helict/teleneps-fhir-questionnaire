@@ -1245,7 +1245,7 @@
     },
     {
       "linkId": "14.0",
-      "text": "Haben Sie in Ihrem Leben schon mehrmals irgendwelche Drogen wie z.B. Haschisch, Ecstasy, Kokain oder Heroin eingenommen?",
+      "text": "Haben Sie in Ihrem Leben schon mehrmals Drogen wie z.B. Haschisch, Crystal, Ecstasy, Kokain oder Heroin eingenommen?",
       "type": "boolean",
       "required": true,
       "repeats": false
@@ -1335,87 +1335,132 @@
     },
     {
       "linkId": "17.0",
-      "text": "Viele Menschen haben irgendwann einmal in ihrem Leben ein sehr belastendes oder traumatisches Erlebnis oder werden Zeugen eines solchen Ereignisses. Bitte geben Sie für jedes der folgenden Ereignisse an, ob Sie es erlebt haben, entweder persönlich oder als Zeuge. Bitte kreuzen Sie an, wenn dies der Fall war.",
-      "type": "choice",
+      "text": "Viele Menschen haben irgendwann einmal in ihrem Leben ein sehr belastendes oder traumatisches Erlebnis oder werden Zeugen eines solchen Ereignisses. Bitte geben Sie für jedes der folgenden Ereignisse an, ob Sie es erlebt haben, entweder persönlich oder als Zeuge. Bitte kreuzen Sie JA an, wenn dies der Fall war, und NEIN, wenn dies nicht der Fall war.",
+      "type": "group",
       "required": true,
       "repeats": true,
-      "answerOption": [
-        {
-          "valueString": "Schwerer Unfall, Feuer, Explosion (z.B. Arbeitsunfall, Verkehrsunfall, usw.)"
-        },
-        {
-          "valueString": "Naturkatastrophe (z.B. Sturm, Überschwemmung, Erdbeben, Lawine, usw.)"
-        },
-        {
-          "valueString": "Gewalttätiger Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht, Stichverletzung, usw.)"
-        },
-        {
-          "valueString": "Gewalttätiger Angriff durch fremde Person (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen usw.)"
-        },
-        {
-          "valueString": "Sexueller Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. Vergewaltigung, Nötigung, usw.)"
-        },
-        {
-          "valueString": "Sexueller Angriff durch fremde Person (z.B. Vergewaltigung, Nötigung, usw.)"
-        },
-        {
-          "valueString": "Kampfeinsatz im Krieg oder Aufenthalt im Kriegsgebiet"
-        },
-        {
-          "valueString": "Sexueller Kontakt im Alter von unter 18 Jahren mit einer Person, die mindestens fünf Jahre älter warn"
-        },
-        {
-          "valueString": "Gefangenschaft (z.B. Geisel, Krieg, usw.)"
-        },
-        {
-          "valueString": "Lebensbedrohliche Krankheit"
-        },
-        {
-          "valueString": "Anderes traumatisches Ereignis"
-        }
-      ]
-    },
-    {
-      "linkId": "18.0",
-      "text": "Beschreiben Sie dieses Ereignis:",
-      "type": "string",
-      "enableWhen": [
-        {
-          "question": "17.0",
-          "operator": "=",
-          "answerString": "Anderes traumatisches Ereignis"
-        }
-      ],
-      "required": true,
-      "repeats": false
-    },
-    {
-      "linkId": "19.0",
-      "text": "Haben Sie mehrmals JA angekreuzt?",
-      "type": "boolean",
-      "required": true,
-      "repeats": false,
       "item": [
         {
-          "linkId": "19.0.1",
-          "type": "group",
-          "enableWhen": [
+          "linkId": "17.1",
+          "text": "Schwerer Unfall, Feuer, Explosion (z.B. Arbeitsunfall, Verkehrsunfall)",
+          "prefix": "1)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.2",
+          "text": "Naturkatastrophe (z.B. Sturm, Überschwemmung, Erdbeben, Lawine)",
+          "prefix": "2)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.3",
+          "text": "Gewalttätiger Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen)",
+          "prefix": "3)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.4",
+          "text": "Gewalttätiger Angriff durch fremde Person (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen)",
+          "prefix": "4)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.5",
+          "text": "Sexueller Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. Vergewaltigung, Nötigung)",
+          "prefix": "5)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.6",
+          "text": "Sexueller Angriff durch fremde Person (z.B. Vergewaltigung, Nötigung)",
+          "prefix": "6)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.7",
+          "text": "Kampfeinsatz im Krieg oder Aufenthalt im Kriegsgebiet",
+          "prefix": "7)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.8",
+          "text": "Sexueller Kontakt im Alter von unter 18 Jahren mit einer Person, die mindestens fünf Jahre älter war",
+          "prefix": "8)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.9",
+          "text": "Gefangenschaft",
+          "prefix": "9)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.10",
+          "text": "Folter",
+          "prefix": "10)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.11",
+          "text": "Lebensbedrohliche Krankheit",
+          "prefix": "11)",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "17.12",
+          "text": "Anderes traumatisches Ereignis",
+          "prefix": "12)",
+          "type": "boolean",
+          "required": true,
+          "item" : [
             {
-              "question": "19.0",
-              "operator": "=",
-              "answerBoolean": true
+              "linkId": "17.12.1",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "17.12",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "17.12.2",
+                  "text": "Wenn ja, beschreiben Sie dieses Ereignis",
+                  "type": "string",
+                  "required": true
+                }
+              ]
             }
-          ],
-          "item": [
+          ]
+        },
+        {
+          "linkId": "17.13",
+          "text": "Wenn Sie mehrmals JA angekreuzt haben, geben Sie bitte hier die Nummer desjenigen Erlebnisses an, das Sie am meisten belastet:",
+          "prefix": "13)",
+          "type": "group",
+          "required": false,
+          "item" : [
             {
-              "linkId": "19.0.1.1",
-              "text": "Welche Nummer hat das Ereignis?",
+              "linkId": "17.13.1",
+              "text": "Nr.",
               "type": "integer",
-              "required": true
+              "required": true 
             },
             {
-              "linkId": "19.0.1.2",
-              "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten:",
+              "linkId": "17.13.2",
+              "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten",
               "type": "string",
               "required": true
             }
@@ -1424,7 +1469,7 @@
       ]
     },
     {
-      "linkId": "20.0",
+      "linkId": "18.0",
       "text": "Wann ist dieses belastende Ereignis passiert?",
       "type": "choice",
       "required": true,
@@ -1451,47 +1496,58 @@
       ],
       "item": [
         {
-          "linkId": "20.1",
+          "linkId": "18.1",
           "text": "In welchem Alter (Jahre)?",
           "type": "integer",
+          "required": true,
+          "repeats": false,
           "enableWhen": [
             {
-              "question": "20.0",
+              "question": "18.0",
               "operator": "=",
               "answerString": "vor mehr als 5 Jahren"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
             }
           ]
         }
       ]
     },
     {
-      "linkId": "21.0",
+      "linkId": "19.0",
       "text": "Haben Sie in Ihrem Leben jemals eine Erfahrung gemacht, die so beängstigend, schrecklich oder erschütternd war, dass Sie im letzten Monat...",
       "type": "group",
       "item": [
         {
-          "linkId": "21.1",
+          "linkId": "19.1",
           "text": "Alpträume davon hatten oder daran gedacht haben, wenn Sie es nicht wollten?",
           "type": "boolean",
           "required": true,
           "repeats": false
         },
         {
-          "linkId": "21.2",
+          "linkId": "19.2",
           "text": "Sich sehr bemüht haben, nicht daran zu denken oder sich große Mühe gegeben haben, Situationen zu vermeiden, die Sie daran erinnerten?",
           "type": "boolean",
           "required": true,
           "repeats": false
         },
         {
-          "linkId": "21.3",
+          "linkId": "19.3",
           "text": "Ständig auf der Hut, wachsam oder leicht zu erschrecken waren?",
           "type": "boolean",
           "required": true,
           "repeats": false
         },
         {
-          "linkId": "21.4",
+          "linkId": "19.4",
           "text": "Sich wie abgestumpft gefühlt haben oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
           "type": "boolean",
           "required": true,
@@ -1500,8 +1556,8 @@
       ]
     },
     {
-      "linkId": "22.0",
-      "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurecht zu kommen:",
+      "linkId": "20.0",
+      "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurecht zu kommen",
       "type": "choice",
       "required": true,
       "repeats": false,
