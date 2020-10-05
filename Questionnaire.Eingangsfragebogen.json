@@ -1526,33 +1526,47 @@
     },
     {
       "linkId": "19.0",
-      "text": "Haben Sie in Ihrem Leben jemals eine Erfahrung gemacht, die so beängstigend, schrecklich oder erschütternd war, dass Sie im letzten Monat...",
+      "text": "Waren Sie oder haben Sie im vergangenen Monat...",
       "type": "group",
+      "required": true,
+      "repeats": false,
       "item": [
         {
           "linkId": "19.1",
-          "text": "Alpträume davon hatten oder daran gedacht haben, wenn Sie es nicht wollten?",
+          "text": "... Alpträume von dem/den Ereignis(sen) gehabt oder dachten Sie an das/die Ereignis(se) wenn Sie es nicht wollten?",
+          "prefix" : "1.",
           "type": "boolean",
           "required": true,
           "repeats": false
         },
         {
           "linkId": "19.2",
-          "text": "Sich sehr bemüht haben, nicht daran zu denken oder sich große Mühe gegeben haben, Situationen zu vermeiden, die Sie daran erinnerten?",
+          "text": "... sich sehr bemüht nicht an das/die Ereignis(se) zu denken oder sich große Mühe gegeben, Situationen zu vermeiden, die Sie an das/die Ereignis(se) erinnerten?",
+          "prefix" : "2.",
           "type": "boolean",
           "required": true,
           "repeats": false
         },
         {
           "linkId": "19.3",
-          "text": "Ständig auf der Hut, wachsam oder leicht zu erschrecken waren?",
+          "text": "... ständig auf der Hut, wachsam oder leicht zu erschrecken?",
+          "prefix" : "3.",
           "type": "boolean",
           "required": true,
           "repeats": false
         },
         {
           "linkId": "19.4",
-          "text": "Sich wie abgestumpft gefühlt haben oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
+          "text": "... sich wie betäubt gefühlt oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
+          "prefix" : "4.",
+          "type": "boolean",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "19.5",
+          "text": "... sich schuldig gefühlt oder konnten Sie nicht damit aufhören sich oder anderen Vorwürfe wegen des/der Ereignisse(s) zu machen oder wegen irgendwelcher Probleme, die durch das/die Ereignis(se) verursacht sein könnten?",
+          "prefix" : "5.",
           "type": "boolean",
           "required": true,
           "repeats": false
