@@ -96,7 +96,7 @@
       "type": "choice",
       "required": true,
       "repeats": false,
-      "answerValueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+      "answerValueSet": "http://tele-neps.de/fhir/ValueSet/Iso3166-1-2"
     },
     {
       "linkId": "0.6",
