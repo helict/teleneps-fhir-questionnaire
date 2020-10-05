@@ -102,7 +102,7 @@
           "code": "8302-2"
         }
       ],
-      "text": "Körpergröße",
+      "text": "Körpergröße (cm)",
       "type": "integer",
       "required": true,
       "repeats": false,
@@ -125,7 +125,7 @@
           "code": "29463-7"
         }
       ],
-      "text": "Körpergewicht",
+      "text": "Körpergewicht (kg)",
       "type": "integer",
       "required": true,
       "repeats": false,
@@ -149,7 +149,7 @@
     },
     {
       "linkId": "0.9",
-      "text": "Höchster Ausbildungsabschluss:",
+      "text": "Höchster Ausbildungsabschluss",
       "type": "choice",
       "required": true,
       "repeats": false,
@@ -189,7 +189,7 @@
           "item": [
             {
               "linkId": "1.1.1",
-              "text": "Diabetes Medikamente:",
+              "text": "Diabetes-Medikamente",
               "type": "display"
             },
             {
@@ -299,7 +299,7 @@
           "item": [
             {
               "linkId": "1.2.1",
-              "text": "Schilddrüsen Medikamente:",
+              "text": "Schilddrüsen-Medikamente",
               "type": "display"
             },
             {
@@ -409,7 +409,7 @@
           "item": [
             {
               "linkId": "1.3.1",
-              "text": "Rheuma-Medikamente:",
+              "text": "Rheuma-Medikamente",
               "type": "display"
             },
             {
@@ -519,7 +519,7 @@
           "item": [
             {
               "linkId": "1.4.1",
-              "text": "Allergie- und Asthma-Medikamente:",
+              "text": "Allergie- und Asthma-Medikamente",
               "type": "display"
             },
             {
@@ -629,7 +629,7 @@
           "item": [
             {
               "linkId": "1.5.1",
-              "text": "Magen-Darm-Medikamente:",
+              "text": "Magen-Darm-Medikamente",
               "type": "display"
             },
             {
@@ -735,7 +735,7 @@
       "repeats": false,
       "item": [
         {
-          "linkId": "2.0.1",
+          "linkId": "2.1",
           "type": "group",
           "repeats": true,
           "enableWhen": [
@@ -747,20 +747,20 @@
           ],
           "item": [
             {
-              "linkId": "2.0.1.1",
+              "linkId": "2.1.1",
               "text": "Welche Krankheit?",
               "type": "choice",
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/vorerkrankungen",
               "required": true
             },
             {
-              "linkId": "2.0.1.2",
+              "linkId": "2.1.2",
               "text": "Welche Allergie?",
               "type": "string",
               "required": true,
               "enableWhen": [
                 {
-                  "question": "2.0.1.1",
+                  "question": "2.1.1",
                   "operator": "=",
                   "answerCoding": {
                     "code": "T88",
@@ -770,13 +770,13 @@
               ]
             },
             {
-              "linkId": "2.0.1.3",
+              "linkId": "2.1.3",
               "text": "Welche Atemwegserkrankung?",
               "type": "string",
               "required": true,
               "enableWhen": [
                 {
-                  "question": "2.0.1.1",
+                  "question": "2.1.1",
                   "operator": "=",
                   "answerCoding": {
                     "code": "J44",
@@ -786,13 +786,13 @@
               ]
             },
             {
-              "linkId": "2.0.1.4",
+              "linkId": "2.1.4",
               "text": "Welche andere Erkrankung?",
               "type": "string",
               "required": true,
               "enableWhen": [
                 {
-                  "question": "2.0.1.1",
+                  "question": "2.1.1",
                   "operator": "=",
                   "answerCoding": {
                     "code": "LA46-8",
@@ -802,7 +802,7 @@
               ]
             },
             {
-              "linkId": "2.0.1.5",
+              "linkId": "2.1.5",
               "text": "Welcher Diabetestyp?",
               "type": "choice",
               "required": true,
@@ -824,7 +824,7 @@
               ],
               "enableWhen": [
                 {
-                  "question": "2.0.1.1",
+                  "question": "2.1.1",
                   "operator": "=",
                   "answerCoding": {
                     "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
@@ -834,14 +834,14 @@
               ]
             },
             {
-              "linkId": "2.0.1.6",
+              "linkId": "2.1.6",
               "text": "Welche Herz-Kreislauf-Erkrankung?",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/herz-kreislauf-erkrankungen",
               "enableWhen": [
                 {
-                  "question": "2.0.1.1",
+                  "question": "2.1.1",
                   "operator": "=",
                   "answerCoding": {
                     "code": "I99",
@@ -851,7 +851,7 @@
               ]
             },
             {
-              "linkId": "2.0.1.7",
+              "linkId": "2.1.7",
               "text": "In welchem Alter? (Jahre)",
               "type": "integer",
               "required": true,
@@ -874,6 +874,7 @@
       "text": "Haben Sie eine dieser Infektionskrankheiten?",
       "type": "group",
       "required": true,
+      "repeats": false,
       "item": [
         {
           "linkId": "3.1",
@@ -916,7 +917,7 @@
         },
         {
           "linkId": "3.4",
-          "text": "Andere:",
+          "text": "Andere",
           "type": "boolean",
           "required": true,
           "repeats": true,
@@ -949,9 +950,10 @@
       "text": "Hatten Sie eine, oder mehrere Geburten?",
       "type": "boolean",
       "required": true,
+      "repeats": false,
       "item": [
         {
-          "linkId": "4.0.1",
+          "linkId": "4.1",
           "text": "Geburt",
           "type": "group",
           "required": true,
@@ -965,25 +967,25 @@
           ],
           "item": [
             {
-              "linkId": "4.0.1.1",
+              "linkId": "4.1.1",
               "text": "Welches Geburtsjahr?",
-              "type": "string",
+              "type": "integer",
               "required": true
             },
             {
-              "linkId": "4.0.1.2",
+              "linkId": "4.1.2",
               "text": "Wurde eine Zange oder Saugglocke genutzt?",
               "type": "boolean",
               "required": true
             },
             {
-              "linkId": "4.0.1.3",
+              "linkId": "4.1.3",
               "text": "Wurde ein Kaiserschnitt vorgenommen?",
               "type": "boolean",
               "required": true
             },
             {
-              "linkId": "4.0.1.4",
+              "linkId": "4.1.4",
               "text": "Gab es sonstige Komplikation?",
               "type": "string"
             }
@@ -996,10 +998,13 @@
       "text": "Hatten Sie Unfälle oder Operationen während der Kindheit, Jugend- und Erwachsenzeit?",
       "type": "boolean",
       "required": true,
+      "repeats": false,
       "item": [
         {
-          "linkId": "5.0.1",
+          "linkId": "5.1",
           "type": "group",
+          "required": true,
+          "repeats": true,
           "enableWhen": [
             {
               "question": "5.0",
@@ -1009,7 +1014,7 @@
           ],
           "item": [
             {
-              "linkId": "5.0.1.1",
+              "linkId": "5.1.1",
               "text": "In welchem Alter? (Jahre)",
               "type": "integer",
               "required": true,
@@ -1024,7 +1029,7 @@
               ]
             },
             {
-              "linkId": "5.0.1.2",
+              "linkId": "5.1.2",
               "text": "Welche Unfälle oder Operationen?",
               "type": "string",
               "required": true
@@ -1041,8 +1046,10 @@
       "repeats": false,
       "item": [
         {
-          "linkId": "6.0.1",
+          "linkId": "6.1",
           "type": "group",
+          "required": true,
+          "repeats": true,
           "enableWhen": [
             {
               "question": "6.0",
@@ -1052,7 +1059,7 @@
           ],
           "item": [
             {
-              "linkId": "6.0.1.1",
+              "linkId": "6.1.1",
               "text": "Welche Beeinträchtigungen?",
               "type": "string",
               "required": true
@@ -1069,7 +1076,7 @@
       "repeats": false,
       "item": [
         {
-          "linkId": "7.0.1",
+          "linkId": "7.1",
           "type": "group",
           "enableWhen": [
             {
@@ -1080,7 +1087,7 @@
           ],
           "item": [
             {
-              "linkId": "7.0.1.1",
+              "linkId": "7.1.1",
               "text": "Wie viele Tage insgesamt?",
               "type": "integer",
               "required": true
@@ -1096,7 +1103,7 @@
       "required": true,
       "item": [
         {
-          "linkId": "8.0.1",
+          "linkId": "8.1",
           "type": "group",
           "enableWhen": [
             {
@@ -1107,13 +1114,13 @@
           ],
           "item": [
             {
-              "linkId": "8.0.1.1",
+              "linkId": "8.1.1",
               "text": "Von wann (Datum)?",
               "type": "date",
               "required": true
             },
             {
-              "linkId": "8.0.1.2",
+              "linkId": "8.1.2",
               "text": "Bis wann (Datum)?",
               "type": "date",
               "required": true
@@ -1130,7 +1137,7 @@
       "repeats": false,
       "item": [
         {
-          "linkId": "9.0.1",
+          "linkId": "9.1",
           "type": "group",
           "enableWhen": [
             {
@@ -1141,13 +1148,13 @@
           ],
           "item": [
             {
-              "linkId": "9.0.1.1",
+              "linkId": "9.1.1",
               "text": "Wenn bewilligt, ab wann (Datum)?",
               "type": "date",
               "required": true
             },
             {
-              "linkId": "9.0.1.2",
+              "linkId": "9.1.2",
               "text": "Wenn bewilligt, bis wann (Datum)?",
               "type": "date",
               "required": true
@@ -1164,7 +1171,7 @@
       "repeats": false,
       "item": [
         {
-          "linkId": "10.0.1",
+          "linkId": "10.1",
           "type": "group",
           "enableWhen": [
             {
@@ -1175,7 +1182,7 @@
           ],
           "item": [
             {
-              "linkId": "10.0.1.1",
+              "linkId": "10.1.1",
               "text": "Wie viele Zigaretten pro Tag?",
               "type": "integer",
               "required": true
@@ -1200,7 +1207,7 @@
     },
     {
       "linkId": "12.0",
-      "text": "Wenn Sie Alkohol trinken, wie viele Gläser trinken Sie dann üblicherweise an einem Tag? (ein Glas entspricht 0,33 L Bier, 0,25 L Wein/Sekt, 0,02 L Spirituosen)",
+      "text": "Wenn Sie Alkohol trinken, wie viele Gläser trinken Sie dann üblicherweise an einem Tag? (ein Glas entspricht 0.33 L Bier, 0.25 L Wein/Sekt, 0.02 L Spirituosen)",
       "type": "choice",
       "code": [
         {
@@ -1214,8 +1221,7 @@
           "operator": "!=",
           "answerCoding": {
             "system": "http://loinc.org",
-            "code": "LA6270-8",
-            "display": "Nie"
+            "code": "LA6270-8"
           }
         }
       ],
@@ -1225,7 +1231,7 @@
     },
     {
       "linkId": "13.0",
-      "text": "Wie oft trinken Sie sechs oder mehr Gläser alkoholischer Getränke bei einer Gelegenheit (z.B. beim Abendessen, auf einer Party)? (ein Glas entspricht 0,33 L Bier, 0,25 L Wein/Sekt, 0,02 L Spirituosen)",
+      "text": "Wie oft trinken Sie sechs oder mehr Gläser alkoholischer Getränke bei einer Gelegenheit (z.B. beim Abendessen, auf einer Party)? (ein Glas entspricht 0.33 L Bier, 0.25 L Wein/Sekt, 0.02 L Spirituosen)",
       "type": "choice",
       "code": [
         {
