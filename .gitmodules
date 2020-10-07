@@ -1,3 +1,6 @@
 [submodule "fhir-schemas"]
 	path = fhir-schemas
 	url = https://github.com/helict/fhir-schemas
+[submodule "Terminology/ValueSets/fhir-valuesets-loinc-de"]
+	path = Terminology/ValueSets/fhir-valuesets-loinc-de
+	url = https://github.com/helict/fhir-valuesets-loinc-de
