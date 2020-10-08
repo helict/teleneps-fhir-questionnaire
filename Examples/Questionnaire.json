@@ -1,5 +1,10 @@
 {
   "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" 
+    ] 
+  },
   "text" : {
     "status" : "additional",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Sehr geehrte Patientin, sehr geehrter Patient,</p><p>vor Ihrem ersten Gespräch mit den Therapeuten unseres Hauses möchten wir Sie bitten, den vorliegenden kurzen Fragbogen auszufüllen. Auf diese Weise können Sie dazu beitragen, dass wir Ihre Beschwerden besser verstehen. Somit wird die Behandlung erleichtert und beschleunigt. Bitte beantworten Sie alle Fragen so präzise, wie es Ihnen möglich ist. Falls Sie Fragen haben oder etwas unklar sein sollte, können Sie sich jederzeit an die Mitarbeiter der Anmeldung wenden.</p><p>Die ausgefüllten Fragebögen und alle Therapieunterlagen werden absolut vertraulich behandelt. Kein Außenstehender (auch nicht Verwandte oder Ihr Hausarzt) erhält ohne Ihre schriftliche Erlaubnis Zugang zu diesen Informationen.</p><p>Herzlichen Dank für Ihre Mitarbeit,<br />das Team der Traumaambulanz</p></div>"
@@ -1574,14 +1579,14 @@
       ]
     },
     {
-      "linkId": "20.0",
+      "linkId": "21.0",
       "text": "Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt?",
       "type": "group",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "20.1",
+          "linkId": "21.1",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1595,7 +1600,7 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "20.2",
+          "linkId": "21.2",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1609,7 +1614,7 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "20.3",
+          "linkId": "21.3",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1623,7 +1628,7 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "20.4",
+          "linkId": "21.4",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1637,7 +1642,7 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "20.5",
+          "linkId": "21.5",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1653,7 +1658,7 @@
       ]
     },
     {
-      "linkId": "21.0",
+      "linkId": "22.0",
           "code" : [
             {
               "system" : "http://loinc.org",
