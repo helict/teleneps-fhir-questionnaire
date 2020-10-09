@@ -21,12 +21,15 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           check-latest: true
-      
-      - name: Checkout Github repository
-        uses: actions/checkout@v2
 
       - name: Install ajv JSON schema validator
-        run: npm i ajv-cli@latest
+        run: npm i -g ajv-cli@latest
+      
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@2.1.1
 
       - name: Validate FHIR resources
         run: chmod +x ./validate.sh && ./validate.sh
