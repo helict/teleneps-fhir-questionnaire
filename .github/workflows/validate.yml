@@ -1,0 +1,32 @@
+name: Validate
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Java JRE
+        uses: actions/setup-java@v1.4.3
+        with:
+          java-version: 1.x
+          java-package: jre
+          architecture: x64
+     
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          check-latest: true
+      
+      - name: Checkout Github repository
+        uses: actions/checkout@v2
+
+      - name: Install ajv JSON schema validator
+        run: npm i ajv-cli@latest
+
+      - name: Validate FHIR resources
+        run: chmod +x ./validate.sh && ./validate.sh
