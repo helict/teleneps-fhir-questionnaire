@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Cancel Workflow Action
         uses: styfle/cancel-workflow-action@0.5.0
+        with:
+          access_token: ${{github.token}}
         
       - name: Setup Java JRE
         uses: actions/setup-java@v1.4.3
