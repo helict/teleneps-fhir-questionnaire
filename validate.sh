@@ -14,7 +14,7 @@ ajv -s fhir-schemas/fhir.schema.json \
 [ -z "$(command -v java)" ] && echo "Please install java runtime environment: https://openjdk.java.net/install" && exit 1
 
 # Download FHIR validator if not exist and validate FHIR resources
-[ ! -f ./validator_cli.jar ] && wget https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
+[ ! -f ./validator_cli.jar ] && wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
 
 java -jar validator_cli.jar Examples/Questionnaire.json \
      -profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire \
