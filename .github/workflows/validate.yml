@@ -23,7 +23,9 @@ jobs:
           architecture: x64
      
       - name: Setup Node.js environment and install ajv-cli
-        run: apt-get update && apt-get install node-ajv
+        run: |
+          sudo apt-get update
+          sudo apt-get install node-ajv
       
       - name: Checkout repository
         uses: actions/checkout@v2
