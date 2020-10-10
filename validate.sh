@@ -18,6 +18,12 @@ ajv -s fhir-schemas/fhir.schema.json \
 
 java -jar validator_cli.jar Examples/Questionnaire.json \
      -profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire \
-     -ig ResourceProfiles/StructureDefinition-sdc-questionnaire.json \
+     -ig ExtensionProfiles/StructureDefinition-sdc-questionnaire.json \
+     -ig ExtensionProfiles/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.json \
+     -ig ExtensionProfiles/StructureDefinition-sdc-questionnaire-performerType.json \
+     -ig ExtensionProfiles/StructureDefinition-sdc-questionnaire-answerExpression.json \
+     -ig ExtensionProfiles/StructureDefinition-sdc-questionnaire-choiceConstraint.json \
+     -ig ExtensionProfiles/extension-designnote.json \
+     -ig ExtensionProfiles/extension-questionnaire-unit.json \
      -version 4.0.1 \
      -debug
