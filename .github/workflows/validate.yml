@@ -22,10 +22,13 @@ jobs:
           java-package: jre
           architecture: x64
      
-      - name: Setup Node.js environment and install ajv-cli
-        run: |
-          sudo apt-get update
-          sudo apt-get install node-ajv
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          check-latest: true
+
+      - name: Install ajv JSON schema validator
+        run: sudo npm i -g ajv-cli@latest
       
       - name: Checkout repository
         uses: actions/checkout@v2
