@@ -40,7 +40,7 @@
   "description": "Eingangsfragebogen im Rahmen der Anamnese zur Erstbefragung von Patient*innen",
   "item": [
     {
-      "linkId": "0.1",
+      "linkId": "PatientFirstName",
       "code": [
         {
           "system": "http://loinc.org",
@@ -53,7 +53,7 @@
       "repeats": false
     },
     {
-      "linkId": "0.2",
+      "linkId": "PatientLastName",
       "code": [
         {
           "system": "http://loinc.org",
@@ -66,7 +66,7 @@
       "repeats": false
     },
     {
-      "linkId": "0.3",
+      "linkId": "PatientAge",
       "code": [
         {
           "system": "http://loinc.org",
@@ -82,13 +82,14 @@
           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
           "valueCoding": {
             "system": "http://unitsofmeasure.org",
-            "code": "a"
+            "code": "a",
+	          "display": "Jahre"
           }
         }
       ]
     },
     {
-      "linkId": "0.4",
+      "linkId": "PatientGender",
       "text": "Geschlecht",
       "type": "choice",
       "required": true,
@@ -96,7 +97,7 @@
       "answerValueSet": "http://tele-neps.de/fhir/ValueSet/geschlecht"
     },
     {
-      "linkId": "0.5",
+      "linkId": "PatientNationality",
       "text": "Nationalität",
       "type": "choice",
       "required": true,
@@ -104,7 +105,7 @@
       "answerValueSet": "http://tele-neps.de/fhir/ValueSet/Iso3166-1-2"
     },
     {
-      "linkId": "0.6",
+      "linkId": "PatientBodyHeight",
       "code": [
         {
           "system": "http://loinc.org",
@@ -127,7 +128,7 @@
       ]
     },
     {
-      "linkId": "0.7",
+      "linkId": "PatientBodyWeight",
       "code": [
         {
           "system": "http://loinc.org",
@@ -150,14 +151,14 @@
       ]
     },
     {
-      "linkId": "0.8",
+      "linkId": "PatientLastProfessionalActivity",
       "text": "Letzte (oder zuletzt ausgeübte) berufliche Tätigkeit?",
       "type": "string",
       "required": true,
       "repeats": false
     },
     {
-      "linkId": "0.9",
+      "linkId": "PatientEducationalAttainment",
       "text": "Höchster Ausbildungsabschluss",
       "type": "choice",
       "required": true,
@@ -178,60 +179,60 @@
       ]
     },
     {
-      "linkId": "1.0",
+      "linkId": "MedicationIntake",
       "text": "Nehmen Sie regelmäßig Medikamente ein?",
       "type": "boolean",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "1.1",
+          "linkId": "MedicationIntakeDetails",
           "type": "group",
           "repeats": true,
           "enableWhen": [
             {
-              "question": "1.0",
+              "question": "MedicationIntake",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "1.1.1",
+              "linkId": "DiabetesMed",
               "text": "Diabetes-Medikamente",
               "type": "display"
             },
             {
-              "linkId": "1.1.2",
+              "linkId": "DiabetesMedName",
               "text": "Medikament",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/diabetes-med-list"
             },
             {
-              "linkId": "1.1.3",
+              "linkId": "DiabetesMedStrength",
               "text": "Stärke",
               "type": "integer"
             },
             {
-              "linkId": "1.1.4",
+              "linkId": "DiabetesMedUnit",
               "text": "Einheit",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
             },
             {
-              "linkId": "1.1.5",
+              "linkId": "DiabetesMedForm",
               "text": "Form",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
             },
             {
-              "linkId": "1.1.6",
+              "linkId": "DiabetesMedFrequency",
               "text": "Wie oft am Tag?",
               "type": "group",
               "item": [
                 {
-                  "linkId": "1.1.6.1",
+                  "linkId": "DiabetesMedIntakeMorning",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -243,7 +244,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.1.6.2",
+                  "linkId": "DiabetesMedIntakeNoon",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -255,7 +256,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.1.6.3",
+                  "linkId": "DiabetesMedIntakeEvening",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -267,7 +268,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.1.6.4",
+                  "linkId": "DiabetesMedIntakeNight",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -281,13 +282,13 @@
               ]
             },
             {
-              "linkId": "1.1.7",
+              "linkId": "DiabetesMedIntakeComment",
               "text": "Kommentar",
               "type": "string",
               "required": false
             },
             {
-              "linkId": "1.1.8",
+              "linkId": "DiabetesMedIntakeAsNeeded",
               "text": "Bei Bedarf",
               "type": "boolean",
               "required": false
@@ -295,53 +296,53 @@
           ]
         },
         {
-          "linkId": "1.2",
+          "linkId": "ThyroidMedIntake",
           "type": "group",
           "repeats": true,
           "enableWhen": [
             {
-              "question": "1.0",
+              "question": "MedicationIntake",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "1.2.1",
+              "linkId": "ThyroidMed",
               "text": "Schilddrüsen-Medikamente",
               "type": "display"
             },
             {
-              "linkId": "1.2.2",
+              "linkId": "ThyroidMedName",
               "text": "Medikament",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/schildd-med-list"
             },
             {
-              "linkId": "1.2.3",
+              "linkId": "ThyroidMedStrength",
               "text": "Stärke",
               "type": "integer"
             },
             {
-              "linkId": "1.2.4",
+              "linkId": "ThyroidMedUnit",
               "text": "Einheit",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
             },
             {
-              "linkId": "1.2.5",
+              "linkId": "ThyroidMedForm",
               "text": "Form",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
             },
             {
-              "linkId": "1.2.6",
+              "linkId": "ThyroidMedFrequency",
               "text": "Wie oft am Tag?",
               "type": "group",
               "item": [
                 {
-                  "linkId": "1.2.6.1",
+                  "linkId": "ThyroidMedIntakeMorning",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -353,7 +354,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.2.6.2",
+                  "linkId": "ThyroidMedIntakeNoon",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -365,7 +366,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.2.6.3",
+                  "linkId": "ThyroidMedIntakeEvening",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -377,7 +378,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.2.6.4",
+                  "linkId": "ThyroidMedIntakeNight",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -391,13 +392,13 @@
               ]
             },
             {
-              "linkId": "1.2.7",
+              "linkId": "ThyroidMedIntakeComment",
               "text": "Kommentar",
               "type": "string",
               "required": false
             },
             {
-              "linkId": "1.2.8",
+              "linkId": "ThyroidMedIntakeAsNeeded",
               "text": "Bei Bedarf",
               "type": "boolean",
               "required": false
@@ -405,53 +406,53 @@
           ]
         },
         {
-          "linkId": "1.3",
+          "linkId": "RheumatismMedIntake",
           "type": "group",
           "repeats": true,
           "enableWhen": [
             {
-              "question": "1.0",
+              "question": "MedicationIntake",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "1.3.1",
+              "linkId": "RhematismMed",
               "text": "Rheuma-Medikamente",
               "type": "display"
             },
             {
-              "linkId": "1.3.2",
+              "linkId": "RhematismMedName",
               "text": "Medikament",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/rheuma-med-list"
             },
             {
-              "linkId": "1.3.3",
+              "linkId": "RhematismMedStrength",
               "text": "Stärke",
               "type": "integer"
             },
             {
-              "linkId": "1.3.4",
+              "linkId": "RhematismMedUnit",
               "text": "Einheit",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
             },
             {
-              "linkId": "1.3.5",
+              "linkId": "RhematismMedForm",
               "text": "Form",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
             },
             {
-              "linkId": "1.3.6",
+              "linkId": "RhematismMedFrequency",
               "text": "Wie oft am Tag?",
               "type": "group",
               "item": [
                 {
-                  "linkId": "1.3.6.1",
+                  "linkId": "RhematismMedIntakeMorning",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -463,7 +464,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.3.6.2",
+                  "linkId": "RhematismMedIntakeNoon",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -475,7 +476,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.3.6.3",
+                  "linkId": "RhematismMedIntakeEvening",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -487,7 +488,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.3.6.4",
+                  "linkId": "RhematismMedIntakeNight",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -501,13 +502,13 @@
               ]
             },
             {
-              "linkId": "1.3.7",
+              "linkId": "RhematismMedIntakeComment",
               "text": "Kommentar",
               "type": "string",
               "required": false
             },
             {
-              "linkId": "1.3.8",
+              "linkId": "RhematismMedIntakeAsNeeded",
               "text": "Bei Bedarf",
               "type": "boolean",
               "required": false
@@ -515,53 +516,53 @@
           ]
         },
         {
-          "linkId": "1.4",
+          "linkId": "AllergyAsthmaMedIntake",
           "type": "group",
           "repeats": true,
           "enableWhen": [
             {
-              "question": "1.0",
+              "question": "MedicationIntake",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "1.4.1",
+              "linkId": "AllergyAsthmaMed",
               "text": "Allergie- und Asthma-Medikamente",
               "type": "display"
             },
             {
-              "linkId": "1.4.2",
+              "linkId": "AllergyAsthmaMedName",
               "text": "Medikament",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/allergie-asthma-med-list"
             },
             {
-              "linkId": "1.4.3",
+              "linkId": "AllergyAsthmaMedStrength",
               "text": "Stärke",
               "type": "integer"
             },
             {
-              "linkId": "1.4.4",
+              "linkId": "AllergyAsthmaMedUnit",
               "text": "Einheit",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
             },
             {
-              "linkId": "1.4.5",
+              "linkId": "AllergyAsthmaMedForm",
               "text": "Form",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
             },
             {
-              "linkId": "1.4.6",
+              "linkId": "AllergyAsthmaMedFrequency",
               "text": "Wie oft am Tag?",
               "type": "group",
               "item": [
                 {
-                  "linkId": "1.4.6.1",
+                  "linkId": "AllergyAsthmaMedIntakeMorning",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -573,7 +574,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.4.6.2",
+                  "linkId": "AllergyAsthmaMedIntakeNoon",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -585,7 +586,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.4.6.3",
+                  "linkId": "AllergyAsthmaMedIntakeEvening",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -597,7 +598,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.4.6.4",
+                  "linkId": "AllergyAsthmaMedNight",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -611,13 +612,13 @@
               ]
             },
             {
-              "linkId": "1.4.7",
+              "linkId": "AllergyAsthmaMedIntakeComment",
               "text": "Kommentar",
               "type": "string",
               "required": false
             },
             {
-              "linkId": "1.4.8",
+              "linkId": "AllergyAsthmaMedIntakeAsNeeded",
               "text": "Bei Bedarf",
               "type": "boolean",
               "required": false
@@ -625,53 +626,53 @@
           ]
         },
         {
-          "linkId": "1.5",
+          "linkId": "GastroenteritisMedIntake",
           "type": "group",
           "repeats": true,
           "enableWhen": [
             {
-              "question": "1.0",
+              "question": "MedicationIntake",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "1.5.1",
+              "linkId": "GastroenteritisMed",
               "text": "Magen-Darm-Medikamente",
               "type": "display"
             },
             {
-              "linkId": "1.5.2",
+              "linkId": "GastroenteritisMedName",
               "text": "Medikament",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/magen-darm-med-list"
             },
             {
-              "linkId": "1.5.3",
+              "linkId": "GastroenteritisMedStrength",
               "text": "Stärke",
               "type": "integer"
             },
             {
-              "linkId": "1.5.4",
+              "linkId": "GastroenteritisMedUnit",
               "text": "Einheit",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
             },
             {
-              "linkId": "1.5.5",
+              "linkId": "GastroenteritisMedForm",
               "text": "Form",
               "type": "choice",
               "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
             },
             {
-              "linkId": "1.5.6",
+              "linkId": "GastroenteritisMedFrequency",
               "text": "Wie oft am Tag?",
               "type": "group",
               "item": [
                 {
-                  "linkId": "1.5.6.1",
+                  "linkId": "GastroenteritisMedIntakeMorning",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -683,7 +684,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.5.6.2",
+                  "linkId": "GastroenteritisMedIntakeNoon",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -695,7 +696,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.5.6.3",
+                  "linkId": "GastroenteritisMedIntakeEvening",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -707,7 +708,7 @@
                   "required": true
                 },
                 {
-                  "linkId": "1.5.6.4",
+                  "linkId": "GastroenteritisMedIntakeNight",
                   "code": [
                     {
                       "system": "http://hl7.org/fhir/event-timing",
@@ -721,13 +722,13 @@
               ]
             },
             {
-              "linkId": "1.5.7",
+              "linkId": "GastroenteritisMedIntakeComment",
               "text": "Kommentar",
               "type": "string",
               "required": false
             },
             {
-              "linkId": "1.5.8",
+              "linkId": "GastroenteritisMedIntakeAsNeeded",
               "text": "Bei Bedarf",
               "type": "boolean",
               "required": false
@@ -737,39 +738,39 @@
       ]
     },
     {
-      "linkId": "2.0",
+      "linkId": "DiseaseHospitalization",
       "text": "Hatten Sie Erkrankungen oder Klinikaufenthalte während der Kindheit, Jugend- und Erwachsenzeit?",
       "type": "boolean",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "2.1",
+          "linkId": "DiseaseHospitalizationGroup",
           "type": "group",
           "repeats": true,
           "enableWhen": [
             {
-              "question": "2.0",
+              "question": "DiseaseHospitalization",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "2.1.1",
+              "linkId": "Disease",
               "text": "Welche Krankheit?",
               "type": "choice",
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/vorerkrankungen",
               "required": true
             },
             {
-              "linkId": "2.1.2",
-              "text": "Welche Allergie?",
+              "linkId": "AllergyDisease",
+              "text": "TODO: code wrong - Welche Allergie?",
               "type": "string",
               "required": true,
               "enableWhen": [
                 {
-                  "question": "2.1.1",
+                  "question": "Disease",
                   "operator": "=",
                   "answerCoding": {
                     "code": "T88",
@@ -779,13 +780,13 @@
               ]
             },
             {
-              "linkId": "2.1.3",
+              "linkId": "PulmonaryDisease",
               "text": "Welche Atemwegserkrankung?",
               "type": "string",
               "required": true,
               "enableWhen": [
                 {
-                  "question": "2.1.1",
+                  "question": "Disease",
                   "operator": "=",
                   "answerCoding": {
                     "code": "J44",
@@ -795,13 +796,13 @@
               ]
             },
             {
-              "linkId": "2.1.4",
+              "linkId": "OtherDisease",
               "text": "Welche andere Erkrankung?",
               "type": "string",
               "required": true,
               "enableWhen": [
                 {
-                  "question": "2.1.1",
+                  "question": "Disease",
                   "operator": "=",
                   "answerCoding": {
                     "code": "LA46-8",
@@ -811,7 +812,7 @@
               ]
             },
             {
-              "linkId": "2.1.5",
+              "linkId": "DiabetesDisease",
               "text": "Welcher Diabetestyp?",
               "type": "choice",
               "required": true,
@@ -833,7 +834,7 @@
               ],
               "enableWhen": [
                 {
-                  "question": "2.1.1",
+                  "question": "Disease",
                   "operator": "=",
                   "answerCoding": {
                     "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
@@ -843,14 +844,14 @@
               ]
             },
             {
-              "linkId": "2.1.6",
+              "linkId": "CardiovascularDisease",
               "text": "Welche Herz-Kreislauf-Erkrankung?",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/herz-kreislauf-erkrankungen",
               "enableWhen": [
                 {
-                  "question": "2.1.1",
+                  "question": "Disease",
                   "operator": "=",
                   "answerCoding": {
                     "code": "I99",
@@ -869,7 +870,8 @@
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
-                    "code": "a"
+                    "code": "a",
+	                  "display": "Jahre"
                   }
                 }
               ]
@@ -1003,27 +1005,27 @@
       ]
     },
     {
-      "linkId": "5.0",
+      "linkId": "PastAccidentsAndOperations",
       "text": "Hatten Sie Unfälle oder Operationen während der Kindheit, Jugend- und Erwachsenzeit?",
       "type": "boolean",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "5.1",
+          "linkId": "PastAccidentsAndOperationsGroup",
           "type": "group",
           "required": true,
           "repeats": true,
           "enableWhen": [
             {
-              "question": "5.0",
+              "question": "PastAccidentsAndOperations",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "5.1.1",
+              "linkId": "PastAccidentsAndOperationsAge",
               "text": "In welchem Alter? (Jahre)",
               "type": "integer",
               "required": true,
@@ -1032,13 +1034,14 @@
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
-                    "code": "a"
+                    "code": "a",
+	                  "display": "Jahre"
                   }
                 }
               ]
             },
             {
-              "linkId": "5.1.2",
+              "linkId": "PastAccidentsAndOperationsDetails",
               "text": "Welche Unfälle oder Operationen?",
               "type": "string",
               "required": true
@@ -1048,27 +1051,27 @@
       ]
     },
     {
-      "linkId": "6.0",
+      "linkId": "PastDiseaseImpairment",
       "text": "Bestehen heute noch Beeinträchtigungen, die von früheren Erkrankungen herrühren?",
       "type": "boolean",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "6.1",
+          "linkId": "PastDiseaseImpairmentGroup",
           "type": "group",
           "required": true,
           "repeats": true,
           "enableWhen": [
             {
-              "question": "6.0",
+              "question": "PastDiseaseImpairment",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "6.1.1",
+              "linkId": "PastDiseaseImpairmentDetails",
               "text": "Welche Beeinträchtigungen?",
               "type": "string",
               "required": true
@@ -1078,25 +1081,25 @@
       ]
     },
     {
-      "linkId": "7.0",
+      "linkId": "PastUnfitnessForWork",
       "text": "Waren Sie in den letzten 12 Monaten arbeitsunfähig?",
       "type": "boolean",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "7.1",
+          "linkId": "PastUnfitnessForWorkGroup",
           "type": "group",
           "enableWhen": [
             {
-              "question": "7.0",
+              "question": "PastUnfitnessForWork",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "7.1.1",
+              "linkId": "PastUnfitnessForWorkTotal",
               "text": "Wie viele Tage insgesamt?",
               "type": "integer",
               "required": true
@@ -1106,31 +1109,31 @@
       ]
     },
     {
-      "linkId": "8.0",
+      "linkId": "PresentUnfitnessForWork",
       "text": "Sind Sie aktuell von einem Arzt arbeitsunfähig geschrieben?",
       "type": "boolean",
       "required": true,
       "item": [
         {
-          "linkId": "8.1",
+          "linkId": "PresentUnfitnessForWorkGroup",
           "type": "group",
           "enableWhen": [
             {
-              "question": "8.0",
+              "question": "PresentUnfitnessForWork",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "8.1.1",
-              "text": "Von wann (Datum)?",
+              "linkId": "PresentUnfitnessForWorkFrom",
+              "text": "Von (Datum)",
               "type": "date",
               "required": true
             },
             {
-              "linkId": "8.1.2",
-              "text": "Bis wann (Datum)?",
+              "linkId": "PresentUnfitnessForWorkUntil",
+              "text": "Bis (Datum)",
               "type": "date",
               "required": true
             }
@@ -1139,32 +1142,32 @@
       ]
     },
     {
-      "linkId": "9.0",
-      "text": "Haben Sie (teilweise) EU Rente beantragt oder ist diese bewilligt?",
+      "linkId": "PensionApplicationApproval",
+      "text": "Haben Sie (teilweise) EU-Rente beantragt oder ist diese bewilligt?",
       "type": "boolean",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "9.1",
+          "linkId": "PensionApplicationApprovalGroup",
           "type": "group",
           "enableWhen": [
             {
-              "question": "9.0",
+              "question": "PensionApplicationApproval",
               "operator": "=",
               "answerBoolean": true
             }
           ],
           "item": [
             {
-              "linkId": "9.1.1",
-              "text": "Wenn bewilligt, ab wann (Datum)?",
+              "linkId": "PensionApplicationApprovalFrom",
+              "text": "Bewilligt von (Datum)",
               "type": "date",
               "required": true
             },
             {
-              "linkId": "9.1.2",
-              "text": "Wenn bewilligt, bis wann (Datum)?",
+              "linkId": "PensionApplicationApprovalUntil",
+              "text": "Bewilligt bis (Datum)",
               "type": "date",
               "required": true
             }
@@ -1173,35 +1176,70 @@
       ]
     },
     {
-      "linkId": "10.0",
+      "linkId": "TobaccoSmokingStatus",
       "text": "Rauchen Sie?",
-      "type": "boolean",
+      "type": "choice",
+      "code" : [
+        {
+          "system" : "http://loinc.org",
+          "code" : "LP156992-2"
+        }
+      ],
       "required": true,
       "repeats": false,
+      "answerOption":[
+        {
+          "valueCoding" : {
+            "system": "http://loinc.org",
+            "code": "LA18979-7",
+            "display": "Ja"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA18980-5",
+            "display": "Nein"
+          }
+        }
+      ],
       "item": [
         {
-          "linkId": "10.1",
+          "linkId": "TobaccoSmokingStatusGroup",
           "type": "group",
           "enableWhen": [
             {
-              "question": "10.0",
+              "question": "TobaccoSmokingStatus",
               "operator": "=",
-              "answerBoolean": true
+              "answerCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18979-7"
+	      }
             }
           ],
           "item": [
             {
-              "linkId": "10.1.1",
-              "text": "Wie viele Zigaretten pro Tag?",
+              "linkId": "TobaccoSmokingStatusCigarettsPerDay",
+              "text": "Wie viele Zigaretten (pro Tag)?",
               "type": "integer",
-              "required": true
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "/d",
+	                  "display": "pro Tag"
+                  }
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "linkId": "11.0",
+      "linkId": "AUDIT-C.1",
       "text": "Wie oft trinken Sie Alkohol?",
       "type": "choice",
       "code": [
@@ -1215,7 +1253,7 @@
       "answerValueSet": "http://loinc.org/vs/LL2179-1"
     },
     {
-      "linkId": "12.0",
+      "linkId": "AUDIT-C.2",
       "text": "Wenn Sie Alkohol trinken, wie viele Gläser trinken Sie dann üblicherweise an einem Tag? (ein Glas entspricht 0.33 L Bier, 0.25 L Wein/Sekt, 0.02 L Spirituosen)",
       "type": "choice",
       "code": [
@@ -1226,7 +1264,7 @@
       ],
       "enableWhen": [
         {
-          "question": "11.0",
+          "question": "AUDIT-C.1",
           "operator": "!=",
           "answerCoding": {
             "system": "http://loinc.org",
@@ -1239,7 +1277,7 @@
       "answerValueSet": "http://loinc.org/vs/LL2180-9"
     },
     {
-      "linkId": "13.0",
+      "linkId": "AUDIT-C.3",
       "text": "Wie oft trinken Sie sechs oder mehr Gläser alkoholischer Getränke bei einer Gelegenheit (z.B. beim Abendessen, auf einer Party)? (ein Glas entspricht 0.33 L Bier, 0.25 L Wein/Sekt, 0.02 L Spirituosen)",
       "type": "choice",
       "code": [
@@ -1522,7 +1560,8 @@
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
               "valueCoding": {
                 "system": "http://unitsofmeasure.org",
-                "code": "a"
+                "code": "a",
+	              "display": "Jahre"
               }
             }
           ]
@@ -1530,14 +1569,14 @@
       ]
     },
     {
-      "linkId": "20.0",
+      "linkId": "PastMonthEvent",
       "text": "Waren Sie oder haben Sie im vergangenen Monat...",
       "type": "group",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "20.1",
+          "linkId": "PastMonthEvent.1",
           "text": "... Alpträume von dem/den Ereignis(sen) gehabt oder dachten Sie an das/die Ereignis(se) wenn Sie es nicht wollten?",
           "prefix" : "1.",
           "type": "boolean",
@@ -1545,7 +1584,7 @@
           "repeats": false
         },
         {
-          "linkId": "20.2",
+          "linkId": "PastMonthEvent.2",
           "text": "... sich sehr bemüht nicht an das/die Ereignis(se) zu denken oder sich große Mühe gegeben, Situationen zu vermeiden, die Sie an das/die Ereignis(se) erinnerten?",
           "prefix" : "2.",
           "type": "boolean",
@@ -1553,7 +1592,7 @@
           "repeats": false
         },
         {
-          "linkId": "20.3",
+          "linkId": "PastMonthEvent.3",
           "text": "... ständig auf der Hut, wachsam oder leicht zu erschrecken?",
           "prefix" : "3.",
           "type": "boolean",
@@ -1561,7 +1600,7 @@
           "repeats": false
         },
         {
-          "linkId": "20.4",
+          "linkId": "PastMonthEvent.4",
           "text": "... sich wie betäubt gefühlt oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
           "prefix" : "4.",
           "type": "boolean",
@@ -1569,7 +1608,7 @@
           "repeats": false
         },
         {
-          "linkId": "20.5",
+          "linkId": "PastMonthEvent.5",
           "text": "... sich schuldig gefühlt oder konnten Sie nicht damit aufhören sich oder anderen Vorwürfe wegen des/der Ereignisse(s) zu machen oder wegen irgendwelcher Probleme, die durch das/die Ereignis(se) verursacht sein könnten?",
           "prefix" : "5.",
           "type": "boolean",
@@ -1579,14 +1618,14 @@
       ]
     },
     {
-      "linkId": "21.0",
+      "linkId": "PHQ-Mix",
       "text": "Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt?",
       "type": "group",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "21.1",
+          "linkId": "PHQ-9.1",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1600,7 +1639,7 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "21.2",
+          "linkId": "PHQ-9.2",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1614,7 +1653,7 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "21.3",
+          "linkId": "PHQ-9.9",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1628,7 +1667,7 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "21.4",
+          "linkId": "PHQ-4.1",
           "code" : [
             {
               "system" : "http://loinc.org",
@@ -1642,11 +1681,11 @@
           "answerValueSet" : "http://loinc.org/vs/LL358-3"
         },
         {
-          "linkId": "21.5",
+          "linkId": "PHQ-SADS.B2",
           "code" : [
             {
               "system" : "http://loinc.org",
-              "code" : "69733-4"
+              "code" : "68509-9"
             }
           ],
           "text": "nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren",
@@ -1658,13 +1697,13 @@
       ]
     },
     {
-      "linkId": "22.0",
-          "code" : [
-            {
-              "system" : "http://loinc.org",
-              "code" : "69722-7"
-            }
-          ],
+      "linkId": "PHQ-15.11",
+      "code" : [
+        {
+          "system" : "http://loinc.org",
+          "code" : "69722-7"
+        }
+      ],
       "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurechtzukommen",
       "type": "choice",
       "required": true,
