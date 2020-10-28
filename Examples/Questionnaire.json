@@ -73,7 +73,7 @@
           "code": "21612-7"
         }
       ],
-      "text": "Alter (Jahre)",
+      "text": "Alter",
       "type": "integer",
       "required": true,
       "repeats": false,
@@ -112,7 +112,7 @@
           "code": "8302-2"
         }
       ],
-      "text": "Körpergröße (cm)",
+      "text": "Körpergröße",
       "type": "integer",
       "required": true,
       "repeats": false,
@@ -135,7 +135,7 @@
           "code": "29463-7"
         }
       ],
-      "text": "Körpergewicht (kg)",
+      "text": "Körpergewicht",
       "type": "integer",
       "required": true,
       "repeats": false,
