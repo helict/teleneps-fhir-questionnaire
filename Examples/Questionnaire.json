@@ -862,16 +862,16 @@
             },
             {
               "linkId": "2.1.7",
-              "text": "In welchem Alter (Jahre)?",
+              "text": "In welchem Jahr?",
               "type": "integer",
               "required": true,
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
-                    "system": "http://hl7.org/fhir/ValueSet/age-units",
+                    "system": "http://unitsofmeasure.org",
                     "code": "a",
-                    "display": "Jahre"
+                    "display": "Jahr"
                   }
                 }
               ]
@@ -1025,17 +1025,17 @@
           ],
           "item": [
             {
-              "linkId": "PastAccidentsAndOperationsAge",
-              "text": "In welchem Alter? (Jahre)",
+              "linkId": "PastAccidentsAndOperationsYear",
+              "text": "In welchem Jahr?",
               "type": "integer",
               "required": true,
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
-                    "system": "http://hl7.org/fhir/ValueSet/age-units",
+                    "system": "http://unitsofmeasure.org",
                     "code": "a",
-                    "display": "Jahre"
+                    "display": "Jahr"
                   }
                 }
               ]
