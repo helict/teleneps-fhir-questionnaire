@@ -81,9 +81,9 @@
         {
           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
           "valueCoding": {
-            "system": "http://unitsofmeasure.org",
+            "system": "http://hl7.org/fhir/ValueSet/age-units",
             "code": "a",
-	          "display": "Jahre"
+            "display": "Jahre"
           }
         }
       ]
@@ -862,16 +862,16 @@
             },
             {
               "linkId": "2.1.7",
-              "text": "In welchem Alter? (Jahre)",
+              "text": "In welchem Alter (Jahre)?",
               "type": "integer",
               "required": true,
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
-                    "system": "http://unitsofmeasure.org",
+                    "system": "http://hl7.org/fhir/ValueSet/age-units",
                     "code": "a",
-	                  "display": "Jahre"
+                    "display": "Jahre"
                   }
                 }
               ]
@@ -1033,9 +1033,9 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
-                    "system": "http://unitsofmeasure.org",
+                    "system": "http://hl7.org/fhir/ValueSet/age-units",
                     "code": "a",
-	                  "display": "Jahre"
+                    "display": "Jahre"
                   }
                 }
               ]
@@ -1214,7 +1214,7 @@
               "answerCoding": {
                 "system": "http://loinc.org",
                 "code": "LA18979-7"
-	      }
+        }
             }
           ],
           "item": [
@@ -1229,7 +1229,7 @@
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
                     "code": "/d",
-	                  "display": "pro Tag"
+                    "display": "pro Tag"
                   }
                 }
               ]
@@ -1559,9 +1559,9 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
               "valueCoding": {
-                "system": "http://unitsofmeasure.org",
+                "system": "http://hl7.org/fhir/ValueSet/age-units",
                 "code": "a",
-	              "display": "Jahre"
+                "display": "Jahre"
               }
             }
           ]
