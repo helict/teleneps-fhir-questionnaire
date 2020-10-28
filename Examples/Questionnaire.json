@@ -186,7 +186,8 @@
       "repeats": false,
       "item": [
         {
-          "linkId": "MedicationIntakeDetails",
+          "linkId": "DiabetesMed",
+          "text": "Diabetes-Medikament",
           "type": "group",
           "repeats": true,
           "enableWhen": [
@@ -197,11 +198,6 @@
             }
           ],
           "item": [
-            {
-              "linkId": "DiabetesMed",
-              "text": "Diabetes-Medikamente",
-              "type": "display"
-            },
             {
               "linkId": "DiabetesMedName",
               "text": "Medikament",
@@ -296,7 +292,8 @@
           ]
         },
         {
-          "linkId": "ThyroidMedIntake",
+          "linkId": "ThyroidMed",
+          "text": "Schilddrüsen-Medikament",
           "type": "group",
           "repeats": true,
           "enableWhen": [
@@ -307,11 +304,6 @@
             }
           ],
           "item": [
-            {
-              "linkId": "ThyroidMed",
-              "text": "Schilddrüsen-Medikamente",
-              "type": "display"
-            },
             {
               "linkId": "ThyroidMedName",
               "text": "Medikament",
@@ -406,7 +398,8 @@
           ]
         },
         {
-          "linkId": "RheumatismMedIntake",
+          "linkId": "RheumatismMed",
+          "text": "Rheuma-Medikament",
           "type": "group",
           "repeats": true,
           "enableWhen": [
@@ -417,11 +410,6 @@
             }
           ],
           "item": [
-            {
-              "linkId": "RhematismMed",
-              "text": "Rheuma-Medikamente",
-              "type": "display"
-            },
             {
               "linkId": "RhematismMedName",
               "text": "Medikament",
@@ -516,7 +504,8 @@
           ]
         },
         {
-          "linkId": "AllergyAsthmaMedIntake",
+          "linkId": "AllergyAsthmaMed",
+          "text": "Allergie- und Asthma-Medikament",
           "type": "group",
           "repeats": true,
           "enableWhen": [
@@ -527,11 +516,6 @@
             }
           ],
           "item": [
-            {
-              "linkId": "AllergyAsthmaMed",
-              "text": "Allergie- und Asthma-Medikamente",
-              "type": "display"
-            },
             {
               "linkId": "AllergyAsthmaMedName",
               "text": "Medikament",
@@ -626,7 +610,8 @@
           ]
         },
         {
-          "linkId": "GastroenteritisMedIntake",
+          "linkId": "GastroenteritisMed",
+          "text": "Magen-Darm-Medikament",
           "type": "group",
           "repeats": true,
           "enableWhen": [
@@ -637,11 +622,6 @@
             }
           ],
           "item": [
-            {
-              "linkId": "GastroenteritisMed",
-              "text": "Magen-Darm-Medikamente",
-              "type": "display"
-            },
             {
               "linkId": "GastroenteritisMedName",
               "text": "Medikament",
@@ -729,6 +709,111 @@
             },
             {
               "linkId": "GastroenteritisMedIntakeAsNeeded",
+              "text": "Bei Bedarf",
+              "type": "boolean",
+              "required": false
+            }
+          ]
+        },
+        {
+          "linkId": "OtherMed",
+          "text": "Anderes Medikament",
+          "type": "group",
+          "repeats": true,
+          "enableWhen": [
+            {
+              "question": "MedicationIntake",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "item": [
+            {
+              "linkId": "OtherMedName",
+              "text": "Medikament",
+              "type": "string",
+              "required": true
+            },
+            {
+              "linkId": "OtherMedStrength",
+              "text": "Stärke",
+              "type": "integer"
+            },
+            {
+              "linkId": "OtherMedUnit",
+              "text": "Einheit",
+              "type": "choice",
+              "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
+            },
+            {
+              "linkId": "OtherMedForm",
+              "text": "Form",
+              "type": "choice",
+              "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
+            },
+            {
+              "linkId": "OtherMedFrequency",
+              "text": "Wie oft am Tag?",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "OtherMedIntakeMorning",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "MORN"
+                    }
+                  ],
+                  "text": "Morgen",
+                  "type": "integer",
+                  "required": true
+                },
+                {
+                  "linkId": "OtherMedIntakeNoon",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "NOON"
+                    }
+                  ],
+                  "text": "Mittag",
+                  "type": "integer",
+                  "required": true
+                },
+                {
+                  "linkId": "OtherMedIntakeEvening",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "EVE"
+                    }
+                  ],
+                  "text": "Abend",
+                  "type": "integer",
+                  "required": true
+                },
+                {
+                  "linkId": "OtherMedIntakeNight",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "NIGHT"
+                    }
+                  ],
+                  "text": "Nacht",
+                  "type": "integer",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "linkId": "OtherMedIntakeComment",
+              "text": "Kommentar",
+              "type": "string",
+              "required": false
+            },
+            {
+              "linkId": "OtherMedIntakeAsNeeded",
               "text": "Bei Bedarf",
               "type": "boolean",
               "required": false
