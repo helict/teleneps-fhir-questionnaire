@@ -1102,7 +1102,16 @@
               "linkId": "PastUnfitnessForWorkTotal",
               "text": "Wie viele Tage insgesamt?",
               "type": "integer",
-              "required": true
+              "required": true,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://hl7.org/fhir/ValueSet/duration-units",
+                    "display": "d"
+                  }
+                }
+              ]
             }
           ]
         }
