@@ -1587,14 +1587,14 @@
       ]
     },
     {
-      "linkId": "PastMonthEvent",
+      "linkId": "PC-PTSD-5",
       "text": "Waren Sie oder haben Sie im vergangenen Monat...",
       "type": "group",
       "required": true,
       "repeats": false,
       "item": [
         {
-          "linkId": "PastMonthEvent.1",
+          "linkId": "PC-PTSD-5.1",
           "text": "... Alpträume von dem/den Ereignis(sen) gehabt oder dachten Sie an das/die Ereignis(se) wenn Sie es nicht wollten?",
           "prefix" : "1.",
           "type": "boolean",
@@ -1602,7 +1602,7 @@
           "repeats": false
         },
         {
-          "linkId": "PastMonthEvent.2",
+          "linkId": "PC-PTSD-5.2",
           "text": "... sich sehr bemüht nicht an das/die Ereignis(se) zu denken oder sich große Mühe gegeben, Situationen zu vermeiden, die Sie an das/die Ereignis(se) erinnerten?",
           "prefix" : "2.",
           "type": "boolean",
@@ -1610,7 +1610,7 @@
           "repeats": false
         },
         {
-          "linkId": "PastMonthEvent.3",
+          "linkId": "PC-PTSD-5.3",
           "text": "... ständig auf der Hut, wachsam oder leicht zu erschrecken?",
           "prefix" : "3.",
           "type": "boolean",
@@ -1618,7 +1618,7 @@
           "repeats": false
         },
         {
-          "linkId": "PastMonthEvent.4",
+          "linkId": "PC-PTSD-5.4",
           "text": "... sich wie betäubt gefühlt oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
           "prefix" : "4.",
           "type": "boolean",
@@ -1626,7 +1626,7 @@
           "repeats": false
         },
         {
-          "linkId": "PastMonthEvent.5",
+          "linkId": "PC-PTSD-5.5",
           "text": "... sich schuldig gefühlt oder konnten Sie nicht damit aufhören sich oder anderen Vorwürfe wegen des/der Ereignisse(s) zu machen oder wegen irgendwelcher Probleme, die durch das/die Ereignis(se) verursacht sein könnten?",
           "prefix" : "5.",
           "type": "boolean",
@@ -1650,7 +1650,7 @@
               "code" : "44250-9"
             }
           ],
-          "text": "wenig Interesse oder Freude an Ihren Tätigkeiten",
+          "text": "Wenig Interesse oder Freude an Ihren Tätigkeiten",
           "type": "choice",
           "required": true,
           "repeats": false,
@@ -1706,7 +1706,7 @@
               "code" : "68509-9"
             }
           ],
-          "text": "nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren",
+          "text": "Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren",
           "type": "choice",
           "required": true,
           "repeats": false,
