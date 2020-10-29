@@ -830,7 +830,8 @@
       "repeats": false,
       "item": [
         {
-          "linkId": "DiseaseHospitalizationGroup",
+          "linkId": "DiseaseGroup",
+          "text": "Erkrankung",
           "type": "group",
           "repeats": true,
           "enableWhen": [
@@ -843,14 +844,14 @@
           "item": [
             {
               "linkId": "Disease",
-              "text": "Welche Krankheit?",
+              "text": "Welche Erkrankung?",
               "type": "choice",
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/vorerkrankungen",
               "required": true
             },
             {
               "linkId": "AllergyDisease",
-              "text": "TODO: code wrong - Welche Allergie?",
+              "text": "Welche Allergie?",
               "type": "string",
               "required": true,
               "enableWhen": [
@@ -876,22 +877,6 @@
                   "answerCoding": {
                     "code": "J44",
                     "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm"
-                  }
-                }
-              ]
-            },
-            {
-              "linkId": "OtherDisease",
-              "text": "Welche andere Erkrankung?",
-              "type": "string",
-              "required": true,
-              "enableWhen": [
-                {
-                  "question": "Disease",
-                  "operator": "=",
-                  "answerCoding": {
-                    "code": "LA46-8",
-                    "system": "http://loinc.org"
                   }
                 }
               ]
@@ -946,20 +931,83 @@
               ]
             },
             {
-              "linkId": "2.1.7",
-              "text": "In welchem Jahr?",
-              "type": "integer",
+              "linkId": "OtherDisease",
+              "text": "Andere Erkrankung",
+              "type": "string",
               "required": true,
+              "enableWhen": [
+                {
+                  "question": "Disease",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "LA46-8",
+                    "system": "http://loinc.org"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "DiseaseYear",
+              "text": "Welches Jahr?",
+              "type": "integer",
+              "required": false,
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
-                    "code": "a",
-                    "display": "Jahr"
+                    "code": "a"
                   }
                 }
               ]
+            },
+            {
+              "linkId": "DiseaseComment",
+              "text": "Kommentar",
+              "type": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "linkId": "HospitalizationGroup",
+          "text": "Klinikaufenthalt",
+          "type": "group",
+          "repeats": true,
+          "enableWhen": [
+            {
+              "question": "DiseaseHospitalization",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "item": [
+            {
+              "linkId": "Hospitalization",
+              "text": "Welcher Klinikaufenthalt?",
+              "type": "string",
+              "required": true
+            },
+            {
+              "linkId": "HospitalizationYear",
+              "text": "Welches Jahr?",
+              "type": "integer",
+              "required": false,
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "a"
+                 }
+                }
+              ]
+            },
+            {
+              "linkId": "HospitalizationComment",
+              "text": "Kommentar",
+              "type": "string",
+              "required": false
             }
           ]
         }
