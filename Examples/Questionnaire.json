@@ -81,9 +81,8 @@
         {
           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
           "valueCoding": {
-            "system": "http://hl7.org/fhir/ValueSet/age-units",
-            "code": "a",
-            "display": "Jahre"
+            "system": "http://unitsofmeasure.org",
+            "code": "a"
           }
         }
       ]
@@ -1625,9 +1624,8 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
               "valueCoding": {
-                "system": "http://hl7.org/fhir/ValueSet/age-units",
-                "code": "a",
-                "display": "Jahre"
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
               }
             }
           ]
