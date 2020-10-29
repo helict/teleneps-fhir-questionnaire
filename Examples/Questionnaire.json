@@ -1385,200 +1385,124 @@
       "answerValueSet": "http://loinc.org/vs/LL2181-7"
     },
     {
-      "linkId": "14.0",
+      "linkId": "DrugAbuse",
       "text": "Haben Sie in Ihrem Leben schon mehrmals Drogen wie z.B. Haschisch, Crystal, Ecstasy, Kokain oder Heroin eingenommen?",
       "type": "boolean",
       "required": true,
       "repeats": false
     },
     {
-      "linkId": "15.0",
+      "linkId": "TreatmentReason",
       "text": "Schildern Sie bitte mit Ihren eigenen Worten den Grund für den Wunsch der Behandlung.",
       "type": "string",
       "required": true,
       "repeats": false
     },
     {
-      "linkId": "16.0",
-      "text": "Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt?",
-      "type": "group",
-      "item": [
-        {
-          "linkId": "16.1",
-          "text": "Wenig Interesse oder Freude an Ihren Tätigkeiten",
-          "type": "choice",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "54637-4"
-            }
-          ],
-          "required": true,
-          "repeats": false,
-          "answerValueSet": "http://loinc.org/vs/LL654-5"
-        },
-        {
-          "linkId": "16.2",
-          "text": "Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit",
-          "type": "choice",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "54639-0"
-            }
-          ],
-          "required": true,
-          "repeats": false,
-          "answerValueSet": "http://loinc.org/vs/LL654-5"
-        },
-        {
-          "linkId": "16.3",
-          "text": "Gedanken, dass Sie lieber tot wären oder sich Leid zufügen möchten",
-          "type": "choice",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "44260-8"
-            }
-          ],
-          "required": true,
-          "answerValueSet": "http://loinc.org/vs/LL358-3"
-        },
-        {
-          "linkId": "16.4",
-          "text": "Nervosität, Ängstlichkeit oder Anspannung",
-          "type": "choice",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "69725-0"
-            }
-          ],
-          "required": true,
-          "repeats": false,
-          "answerValueSet": "http://loinc.org/vs/LL358-3"
-        },
-        {
-          "linkId": "16.5",
-          "text": "Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren",
-          "type": "choice",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "68509-9"
-            }
-          ],
-          "required": true,
-          "repeats": false,
-          "answerValueSet": "http://loinc.org/vs/LL2184-1"
-        }
-      ]
-    },
-    {
-      "linkId": "17.0",
+      "linkId": "LifeEventsChecklist",
       "text": "Viele Menschen haben irgendwann einmal in ihrem Leben ein sehr belastendes oder traumatisches Erlebnis oder werden Zeugen eines solchen Ereignisses. Bitte geben Sie für jedes der folgenden Ereignisse an, ob Sie es erlebt haben, entweder persönlich oder als Zeuge. Bitte kreuzen Sie JA an, wenn dies der Fall war, und NEIN, wenn dies nicht der Fall war.",
       "type": "group",
       "required": true,
-      "repeats": true,
+      "repeats": false,
       "item": [
         {
-          "linkId": "17.1",
+          "linkId": "LifeEventsChecklist.AccidentFireExplosion",
           "text": "Schwerer Unfall, Feuer, Explosion (z.B. Arbeitsunfall, Verkehrsunfall)",
           "prefix": "1)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.2",
+          "linkId": "LifeEventsChecklist.NaturalDisaster",
           "text": "Naturkatastrophe (z.B. Sturm, Überschwemmung, Erdbeben, Lawine)",
           "prefix": "2)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.3",
+          "linkId": "LifeEventsChecklist.PhysicalAssaultFamilyFriends",
           "text": "Gewalttätiger Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen)",
           "prefix": "3)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.4",
+          "linkId": "LifeEventsChecklist.PhysicalAssaultForeignPerson",
           "text": "Gewalttätiger Angriff durch fremde Person (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen)",
           "prefix": "4)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.5",
+          "linkId": "LifeEventsChecklist.SexualAssaultFamilyFriends",
           "text": "Sexueller Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. Vergewaltigung, Nötigung)",
           "prefix": "5)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.6",
+          "linkId": "LifeEventsChecklist.SexualAssaultForeignPerson",
           "text": "Sexueller Angriff durch fremde Person (z.B. Vergewaltigung, Nötigung)",
           "prefix": "6)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.7",
+          "linkId": "LifeEventsChecklist.CombatExposureWarZone",
           "text": "Kampfeinsatz im Krieg oder Aufenthalt im Kriegsgebiet",
           "prefix": "7)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.8",
+          "linkId": "LifeEventsChecklist.SexualAbuseUnderage",
           "text": "Sexueller Kontakt im Alter von unter 18 Jahren mit einer Person, die mindestens fünf Jahre älter war",
           "prefix": "8)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.9",
+          "linkId": "LifeEventsChecklist.Captivity",
           "text": "Gefangenschaft",
           "prefix": "9)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.10",
+          "linkId": "LifeEventsChecklist.SevereHumanSuffering",
           "text": "Folter",
           "prefix": "10)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.11",
+          "linkId": "LifeEventsChecklist.LifeThreateningIllnessInjury",
           "text": "Lebensbedrohliche Krankheit",
           "prefix": "11)",
           "type": "boolean",
           "required": true
         },
         {
-          "linkId": "17.12",
+          "linkId": "LifeEventsChecklist.OtherTraumaticEvent",
           "text": "Anderes traumatisches Ereignis",
           "prefix": "12)",
           "type": "boolean",
           "required": true,
           "item" : [
             {
-              "linkId": "17.12.1",
+              "linkId": "LifeEventsChecklist.OtherTraumaticEventGroup",
               "type": "group",
               "enableWhen": [
                 {
-                  "question": "17.12",
+                  "question": "LifeEventsChecklist.OtherTraumaticEvent",
                   "operator": "=",
                   "answerBoolean": true
                 }
               ],
               "item": [
                 {
-                  "linkId": "17.12.2",
-                  "text": "Wenn ja, beschreiben Sie dieses Ereignis",
+                  "linkId": "LifeEventsChecklist.OtherTraumaticEventDetails",
+                  "text": "Beschreiben Sie dieses Ereignis",
                   "type": "string",
                   "required": true
                 }
@@ -1587,20 +1511,20 @@
           ]
         },
         {
-          "linkId": "17.13",
-          "text": "Wenn Sie mehrmals JA angekreuzt haben, geben Sie bitte hier die Nummer desjenigen Erlebnisses an, das Sie am meisten belastet:",
+          "linkId": "LifeEventsChecklist.MostStressfulEventGroup",
+          "text": "Wenn Sie mehrmals JA angekreuzt haben, geben Sie bitte hier die Nummer desjenigen Erlebnisses an, das Sie am meisten belastet",
           "prefix": "13)",
           "type": "group",
           "required": false,
           "item" : [
             {
-              "linkId": "17.13.1",
+              "linkId": "LifeEventsChecklist.MostStressfullEventNumber",
               "text": "Nr.",
               "type": "integer",
               "required": true 
             },
             {
-              "linkId": "17.13.2",
+              "linkId": "LifeEventsChecklist.MostStressfulEventDetails",
               "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten",
               "type": "string",
               "required": true
@@ -1610,10 +1534,10 @@
       ]
     },
     {
-      "linkId": "18.0",
+      "linkId": "LifeEventsChecklist.MostStressfulEventPeriod",
       "text": "Wann ist dieses belastende Ereignis passiert?",
       "type": "choice",
-      "required": true,
+      "required": false,
       "repeats": false,
       "answerOption": [
         {
@@ -1637,14 +1561,14 @@
       ],
       "item": [
         {
-          "linkId": "18.1",
-          "text": "In welchem Alter (Jahre)?",
+          "linkId": "LifeEventsChecklist.MostStressfulEventAge",
+          "text": "Im Alter von",
           "type": "integer",
           "required": true,
           "repeats": false,
           "enableWhen": [
             {
-              "question": "18.0",
+              "question": "LifeEventsChecklist.MostStressfulEventPeriod",
               "operator": "=",
               "answerString": "vor mehr als 5 Jahren"
             }
