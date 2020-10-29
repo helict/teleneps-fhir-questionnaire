@@ -114,7 +114,7 @@
           },
           {
             "code": "B06",
-            "display": "Röteln "
+            "display": "Röteln"
           },
           {
             "code": "E07.9",
@@ -127,6 +127,10 @@
           {
             "code": "B01",
             "display": "Windpocken"
+          },
+          {
+            "code": "B99",
+            "display": "Infektionserkrankung"
           },
           {
             "system": "http://loinc.org",

@@ -930,6 +930,64 @@
               ]
             },
             {
+              "linkId": "InfectiousDisease",
+              "text": "Welche Infektionserkrankung?",
+              "type": "group",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Disease",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "B99",
+                    "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm"
+                  }
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "HepatitisDisease",
+                  "text": "Hepatitis",
+                  "type": "boolean",
+                  "required": true,
+                  "repeats": false,
+                  "code": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "B19"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "AidsDisease",
+                  "text": "AIDS",
+                  "type": "boolean",
+                  "required": true,
+                  "repeats": false,
+                  "code": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "B24"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "TuberkuloseDisease",
+                  "text": "Tuberkulose",
+                  "type": "boolean",
+                  "required": true,
+                  "repeats": false,
+                  "code": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "A15"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "linkId": "OtherDisease",
               "text": "Andere Erkrankung",
               "type": "string",
@@ -1007,82 +1065,6 @@
               "text": "Kommentar",
               "type": "string",
               "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "linkId": "3.0",
-      "text": "Haben Sie eine dieser Infektionskrankheiten?",
-      "type": "group",
-      "required": true,
-      "repeats": false,
-      "item": [
-        {
-          "linkId": "3.1",
-          "text": "Hepatitis",
-          "type": "boolean",
-          "required": true,
-          "repeats": false,
-          "code": [
-            {
-              "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
-              "code": "B19"
-            }
-          ]
-        },
-        {
-          "linkId": "3.2",
-          "text": "AIDS",
-          "type": "boolean",
-          "required": true,
-          "repeats": false,
-          "code": [
-            {
-              "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
-              "code": "B24"
-            }
-          ]
-        },
-        {
-          "linkId": "3.3",
-          "text": "Tuberkulose",
-          "type": "boolean",
-          "required": true,
-          "repeats": false,
-          "code": [
-            {
-              "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
-              "code": "A15"
-            }
-          ]
-        },
-        {
-          "linkId": "3.4",
-          "text": "Andere",
-          "type": "boolean",
-          "required": true,
-          "repeats": true,
-          "item": [
-            {
-              "linkId": "3.4.1",
-              "text": "Welche Infektionskrankheit?",
-              "type": "string",
-              "required": true,
-              "code": [
-                {
-                  "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
-                  "code": "B99"
-                }
-              ],
-              "enableWhen": [
-                {
-                  "question": "3.4",
-                  "operator": "=",
-                  "answerBoolean": true
-                }
-              ]
             }
           ]
         }
