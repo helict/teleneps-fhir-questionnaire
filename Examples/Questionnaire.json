@@ -1323,7 +1323,7 @@
       "code" : [
         {
           "system" : "http://loinc.org",
-          "code" : "LP156992-2"
+          "code" : "72166-2"
         }
       ],
       "required": true,
