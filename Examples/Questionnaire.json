@@ -5,9 +5,9 @@
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" 
     ] 
   },
-  "text" : {
-    "status" : "additional",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Sehr geehrte Patientin, sehr geehrter Patient,</p><p>vor Ihrem ersten Gespräch mit den Therapeuten unseres Hauses möchten wir Sie bitten, den vorliegenden kurzen Fragbogen auszufüllen. Auf diese Weise können Sie dazu beitragen, dass wir Ihre Beschwerden besser verstehen. Somit wird die Behandlung erleichtert und beschleunigt. Bitte beantworten Sie alle Fragen so präzise, wie es Ihnen möglich ist. Falls Sie Fragen haben oder etwas unklar sein sollte, können Sie sich jederzeit an die Mitarbeiter der Anmeldung wenden.</p><p>Die ausgefüllten Fragebögen und alle Therapieunterlagen werden absolut vertraulich behandelt. Kein Außenstehender (auch nicht Verwandte oder Ihr Hausarzt) erhält ohne Ihre schriftliche Erlaubnis Zugang zu diesen Informationen.</p><p>Herzlichen Dank für Ihre Mitarbeit,<br />das Team der Traumaambulanz</p></div>"
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Sehr geehrte Patientin, sehr geehrter Patient,</p><p>vor Ihrem ersten Gespräch mit den Therapeuten unseres Hauses möchten wir Sie bitten, den vorliegenden kurzen Fragbogen auszufüllen. Auf diese Weise können Sie dazu beitragen, dass wir Ihre Beschwerden besser verstehen. Somit wird die Behandlung erleichtert und beschleunigt. Bitte beantworten Sie alle Fragen so präzise, wie es Ihnen möglich ist. Falls Sie Fragen haben oder etwas unklar sein sollte, können Sie sich jederzeit an die Mitarbeiter der Anmeldung wenden.</p><p>Die ausgefüllten Fragebögen und alle Therapieunterlagen werden absolut vertraulich behandelt. Kein Außenstehender (auch nicht Verwandte oder Ihr Hausarzt) erhält ohne Ihre schriftliche Erlaubnis Zugang zu diesen Informationen.</p><p>Herzlichen Dank für Ihre Mitarbeit,<br />das Team der Traumaambulanz</p></div>"
   },
   "url": "http://tele-neps.de/fhir/Questionnaire/eingangsfragebogen",
   "version": "1.0.0",
@@ -1157,26 +1157,25 @@
           ],
           "item": [
             {
+              "linkId": "PastAccidentsAndOperationsDetails",
+              "text": "Welche Unfälle oder Operationen?",
+              "type": "string",
+              "required": true
+            },
+            {
               "linkId": "PastAccidentsAndOperationsYear",
-              "text": "In welchem Jahr?",
+              "text": "Welches Jahr?",
               "type": "integer",
-              "required": true,
+              "required": false,
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
-                    "code": "a",
-                    "display": "Jahr"
-                  }
+                    "code": "a"
+                 }
                 }
               ]
-            },
-            {
-              "linkId": "PastAccidentsAndOperationsDetails",
-              "text": "Welche Unfälle oder Operationen?",
-              "type": "string",
-              "required": true
             }
           ]
         }
@@ -1204,7 +1203,7 @@
           "item": [
             {
               "linkId": "PastDiseaseImpairmentDetails",
-              "text": "Welche Beeinträchtigungen?",
+              "text": "Welche Beeinträchtigung?",
               "type": "string",
               "required": true
             }
@@ -1268,13 +1267,13 @@
           "item": [
             {
               "linkId": "PresentUnfitnessForWorkFrom",
-              "text": "Von (Datum)",
+              "text": "Von",
               "type": "date",
               "required": true
             },
             {
               "linkId": "PresentUnfitnessForWorkUntil",
-              "text": "Bis (Datum)",
+              "text": "Bis",
               "type": "date",
               "required": true
             }
@@ -1302,15 +1301,15 @@
           "item": [
             {
               "linkId": "PensionApplicationApprovalFrom",
-              "text": "Bewilligt von (Datum)",
+              "text": "Bewilligt von",
               "type": "date",
-              "required": true
+              "required": false
             },
             {
               "linkId": "PensionApplicationApprovalUntil",
-              "text": "Bewilligt bis (Datum)",
+              "text": "Bewilligt bis",
               "type": "date",
-              "required": true
+              "required": false
             }
           ]
         }
@@ -1361,7 +1360,7 @@
           "item": [
             {
               "linkId": "TobaccoSmokingStatusCigarettsPerDay",
-              "text": "Wie viele Zigaretten (pro Tag)?",
+              "text": "Wie viele Zigaretten pro Tag?",
               "type": "integer",
               "required": true,
               "extension": [
@@ -1369,8 +1368,7 @@
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
                   "valueCoding": {
                     "system": "http://unitsofmeasure.org",
-                    "code": "/d",
-                    "display": "pro Tag"
+                    "code": "/d"
                   }
                 }
               ]
