@@ -189,6 +189,7 @@
           "linkId": "DiabetesMed",
           "text": "Diabetes-Medikament",
           "type": "group",
+          "required": false,
           "repeats": true,
           "enableWhen": [
             {
@@ -295,6 +296,7 @@
           "linkId": "ThyroidMed",
           "text": "Schilddrüsen-Medikament",
           "type": "group",
+          "required": false,
           "repeats": true,
           "enableWhen": [
             {
@@ -401,6 +403,7 @@
           "linkId": "RheumatismMed",
           "text": "Rheuma-Medikament",
           "type": "group",
+          "required": false,
           "repeats": true,
           "enableWhen": [
             {
@@ -507,6 +510,7 @@
           "linkId": "AllergyAsthmaMed",
           "text": "Allergie- und Asthma-Medikament",
           "type": "group",
+          "required": false,
           "repeats": true,
           "enableWhen": [
             {
@@ -613,6 +617,7 @@
           "linkId": "GastroenteritisMed",
           "text": "Magen-Darm-Medikament",
           "type": "group",
+          "required": false,
           "repeats": true,
           "enableWhen": [
             {
@@ -719,6 +724,7 @@
           "linkId": "OtherMed",
           "text": "Anderes Medikament",
           "type": "group",
+          "required": false,
           "repeats": true,
           "enableWhen": [
             {
