@@ -186,6 +186,113 @@
       "repeats": false,
       "item": [
         {
+          "linkId": "PsychotropicMed",
+          "text": "Psychopharmaka",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "enableWhen": [
+            {
+              "question": "MedicationIntake",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "item": [
+            {
+              "linkId": "PsychotropicMedName",
+              "text": "Medikament",
+              "type": "choice",
+              "required": true,
+              "answerValueSet": "http://tele-neps.de/fhir/ValueSet/psychopharmaka-med-list"
+            },
+            {
+              "linkId": "PsychotropicMedStrength",
+              "text": "Stärke",
+              "type": "integer"
+            },
+            {
+              "linkId": "PsychotropicMedUnit",
+              "text": "Einheit",
+              "type": "choice",
+              "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit"
+            },
+            {
+              "linkId": "PsychotropicMedForm",
+              "text": "Form",
+              "type": "choice",
+              "answerValueSet": "http://fhir.de/ValueSet/kbv/s-bmp-darreichungsform"
+            },
+            {
+              "linkId": "PsychotropicMedFrequency",
+              "text": "Wie oft am Tag?",
+              "type": "group",
+              "item": [
+                {
+                  "linkId": "PsychotropicMedIntakeMorning",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "MORN"
+                    }
+                  ],
+                  "text": "Morgens",
+                  "type": "integer",
+                  "required": true
+                },
+                {
+                  "linkId": "PsychotropicMedIntakeNoon",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "NOON"
+                    }
+                  ],
+                  "text": "Mittags",
+                  "type": "integer",
+                  "required": true
+                },
+                {
+                  "linkId": "PsychotropicMedIntakeEvening",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "EVE"
+                    }
+                  ],
+                  "text": "Abends",
+                  "type": "integer",
+                  "required": true
+                },
+                {
+                  "linkId": "PsychotropicMedIntakeNight",
+                  "code": [
+                    {
+                      "system": "http://hl7.org/fhir/event-timing",
+                      "code": "NIGHT"
+                    }
+                  ],
+                  "text": "Zur Nacht",
+                  "type": "integer",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "linkId": "PsychotropicMedIntakeComment",
+              "text": "Kommentar",
+              "type": "string",
+              "required": false
+            },
+            {
+              "linkId": "PsychotropicMedIntakeAsNeeded",
+              "text": "Bei Bedarf",
+              "type": "boolean",
+              "required": false
+            }
+          ]
+        },
+        {
           "linkId": "DiabetesMed",
           "text": "Diabetes-Medikament",
           "type": "group",
