@@ -201,7 +201,7 @@
           "item": [
             {
               "linkId": "PsychotropicMedName",
-              "text": "Medikament",
+              "text": "Name",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/psychopharmaka-med-list"
@@ -308,7 +308,7 @@
           "item": [
             {
               "linkId": "DiabetesMedName",
-              "text": "Medikament",
+              "text": "Name",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/diabetes-med-list"
@@ -415,7 +415,7 @@
           "item": [
             {
               "linkId": "ThyroidMedName",
-              "text": "Medikament",
+              "text": "Name",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/schildd-med-list"
@@ -522,7 +522,7 @@
           "item": [
             {
               "linkId": "RhematismMedName",
-              "text": "Medikament",
+              "text": "Name",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/rheuma-med-list"
@@ -629,7 +629,7 @@
           "item": [
             {
               "linkId": "AllergyAsthmaMedName",
-              "text": "Medikament",
+              "text": "Name",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/allergie-asthma-med-list"
@@ -736,7 +736,7 @@
           "item": [
             {
               "linkId": "GastroenteritisMedName",
-              "text": "Medikament",
+              "text": "Name",
               "type": "choice",
               "required": true,
               "answerValueSet": "http://tele-neps.de/fhir/ValueSet/magen-darm-med-list"
@@ -843,7 +843,7 @@
           "item": [
             {
               "linkId": "OtherMedName",
-              "text": "Medikament",
+              "text": "Name",
               "type": "string",
               "required": true
             },
