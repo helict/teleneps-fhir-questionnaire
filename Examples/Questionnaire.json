@@ -1042,8 +1042,99 @@
             {
               "linkId": "Hospitalization",
               "text": "Welcher Klinikaufenthalt?",
+              "type": "choice",
+              "required": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                    "code": "O75.9",
+                    "display": "Geburt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA46-8",
+                    "display": "Anderer"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Birth",
+              "text": "Geburt",
+              "type": "group",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Hospitalization",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                    "code": "O75.9"
+                  }
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "ForcepsVacuumDelivery",
+                  "text": "Zange oder Saugglocke",
+                  "type": "boolean",
+                  "required": true,
+                  "repeats": false,
+                  "code": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "O81"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "CesareanDelivery",
+                  "text": "Kaiserschnitt",
+                  "type": "boolean",
+                  "required": true,
+                  "repeats": false,
+                  "code": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "O82"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "OtherBirthComplication",
+                  "text": "Andere Komplikationn",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false,
+                  "code": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+                      "code": "O75.9"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "OtherHospitalization",
+              "text": "Anderer Klinikaufenthalt",
               "type": "string",
-              "required": true
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Hospitalization",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA46-8"
+                  }
+                }
+              ]
             },
             {
               "linkId": "HospitalizationYear",
@@ -1065,54 +1156,6 @@
               "text": "Kommentar",
               "type": "string",
               "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "linkId": "4.0",
-      "text": "Hatten Sie eine, oder mehrere Geburten?",
-      "type": "boolean",
-      "required": true,
-      "repeats": false,
-      "item": [
-        {
-          "linkId": "4.1",
-          "text": "Geburt",
-          "type": "group",
-          "required": true,
-          "repeats": true,
-          "enableWhen": [
-            {
-              "question": "4.0",
-              "operator": "=",
-              "answerBoolean": true
-            }
-          ],
-          "item": [
-            {
-              "linkId": "4.1.1",
-              "text": "Welches Geburtsjahr?",
-              "type": "integer",
-              "required": true
-            },
-            {
-              "linkId": "4.1.2",
-              "text": "Wurde eine Zange oder Saugglocke genutzt?",
-              "type": "boolean",
-              "required": true
-            },
-            {
-              "linkId": "4.1.3",
-              "text": "Wurde ein Kaiserschnitt vorgenommen?",
-              "type": "boolean",
-              "required": true
-            },
-            {
-              "linkId": "4.1.4",
-              "text": "Gab es sonstige Komplikation?",
-              "type": "string"
             }
           ]
         }
