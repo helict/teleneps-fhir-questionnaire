@@ -1,0 +1,798 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "status": "completed",
+  "authored": "2020-09-30T00:00:00+01:00",
+  "item": [
+    {
+      "linkId": "PatientFirstName",
+      "text": "Vorname",
+      "answer": [
+        {
+          "valueString": "Melanie"
+        }
+      ]
+    },
+    {
+      "linkId": "PatientLastName",
+      "text": "Nachname",
+      "answer": [
+        {
+          "valueString": "Musterfrau"
+        }
+      ]
+    },
+    {
+      "linkId": "PatientAge",
+      "text": "Alter",
+      "answer": [
+        {
+          "valueInteger": 31
+        }
+      ]
+    },
+    {
+      "linkId": "PatientGender",
+      "text": "Geschlecht",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://tele-neps.de/fhir/ValueSet/geschlecht",
+            "code": "f",
+            "display": "weiblich"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "PatientNationality",
+      "text": "Nationalität",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://tele-neps.de/fhir/ValueSet/Iso3166-1-2",
+            "code": "de",
+            "display": "Deutschland"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "PatientBodyHeight",
+      "text": "Körpergröße",
+      "answer": [
+        {
+          "valueInteger": 180
+        }
+      ]
+    },
+    {
+      "linkId": "PatientBodyWeight",
+      "text": "Körpergewicht",
+      "answer": [
+        {
+          "valueInteger": 63
+        }
+      ]
+    },
+    {
+      "linkId": "PatientLastProfessionalActivity",
+      "text": "Letzte (oder zuletzt ausgeübte) berufliche Tätigkeit?",
+      "answer": [
+        {
+          "valueString": "Floristin"
+        }
+      ]
+    },
+    {
+      "linkId": "PatientEducationalAttainment",
+      "text": "Höchster Ausbildungsabschluss",
+      "answer": [
+        {
+          "valueString": "Fachhochschule/Universität"
+        }
+      ]
+    },
+    {
+      "linkId": "MedicationIntake",
+      "text": "Nehmen Sie regelmäßig Medikamente ein?",
+      "answer": [
+        {
+          "valueBoolean": true,
+          "item": [
+            {
+              "linkId": "PsychotropicMed",
+              "text": "Psychopharmaka",
+              "item": [
+                {
+                  "linkId": "PsychotropicMedName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueCoding": {
+                        "system": "http://tele-neps.de/fhir/ValueSet/psychopharmaka-med-list",
+                        "code": "Lorazepam_Tavor_Tolid",
+                        "display": "Lorazepam, Tavor, Tolid"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "PsychotropicMedIntakeComment",
+                  "text": "Kommentar",
+                  "answer": [
+                    {
+                      "valueString": "1x"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "PsychotropicMedIntakeAsNeeded",
+                  "text": "Bei Bedarf",
+                  "answer": [
+                    {
+                      "valueBoolean": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "OtherMed",
+              "text": "Anderes Medikament",
+              "item": [
+                {
+                  "linkId": "OtherMedName",
+                  "text": "Name",
+                  "answer": [
+                    {
+                      "valueString": "Pille"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "OtherMedStrength",
+                  "text": "Stärke",
+                  "answer": [
+                    {
+                      "valueInteger": 15
+                    }
+                  ]
+                },
+                {
+                  "linkId": "OtherMedUnit",
+                  "text": "Einheit",
+                  "answer": [
+                    {
+                      "valueCoding": {
+                        "system": "http://fhir.de/ValueSet/kbv/s-bmp-dosiereinheit",
+                        "code": "v",
+                        "display": "mg"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "OtherMedFrequency",
+                  "text": "Wie oft am Tag?",
+                  "item": [
+                    {
+                      "linkId": "OtherMedIntakeMorning",
+                      "text": "Morgens",
+                      "answer": [
+                        {
+                          "valueInteger": 0
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "OtherMedIntakeNoon",
+                      "text": "Mittags",
+                      "answer": [
+                        {
+                          "valueInteger": 1
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "OtherMedIntakeEvening",
+                      "text": "Abends",
+                      "answer": [
+                        {
+                          "valueInteger": 0
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "OtherMedIntakeNight",
+                      "text": "Zur Nacht",
+                      "answer": [
+                        {
+                          "valueInteger": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "DiseaseHospitalization",
+      "text": "Hatten Sie Erkrankungen oder Klinikaufenthalte während der Kindheit, Jugend- und Erwachsenzeit?",
+      "answer": [
+        {
+          "valueBoolean": true,
+          "item": [
+            {
+              "linkId": "HospitalizationGroup",
+              "text": "Klinikaufenthalt",
+              "item": [
+                {
+                  "linkId": "Hospitalization",
+                  "text": "Welcher Klinikaufenthalt?",
+                  "answer": [
+                    {
+                      "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA46-8",
+                        "display": "Anderer"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "OtherHospitalization",
+                  "text": "Anderer Klinikaufenthalt",
+                  "answer": [
+                    {
+                      "valueString": "Kinder- u. Jugendpsychatrie"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "HospitalizationYear",
+                  "text": "Welches Jahr?",
+                  "answer": [
+                    {
+                      "valueInteger": 2007
+                    }
+                  ]
+                },
+                {
+                  "linkId": "HospitalizationComment",
+                  "text": "Kommentar",
+                  "answer": [
+                    {
+                      "valueString": "3 Wo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "HospitalizationGroup",
+              "text": "Klinikaufenthalt",
+              "item": [
+                {
+                  "linkId": "Hospitalization",
+                  "text": "Welcher Klinikaufenthalt?",
+                  "answer": [
+                    {
+                      "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA46-8",
+                        "display": "Anderer"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "OtherHospitalization",
+                  "text": "Anderer Klinikaufenthalt",
+                  "answer": [
+                    {
+                      "valueString": "Blinddarm-OP"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "HospitalizationYear",
+                  "text": "Welches Jahr?",
+                  "answer": [
+                    {
+                      "valueInteger": 2015
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "PastAccidentsAndOperations",
+      "text": "Hatten Sie Unfälle oder Operationen während der Kindheit, Jugend- und Erwachsenzeit?",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "PastDiseaseImpairment",
+      "text": "Bestehen heute noch Beeinträchtigungen, die von früheren Erkrankungen herrühren?",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "PastUnfitnessForWork",
+      "text": "Waren Sie in den letzten 12 Monaten arbeitsunfähig?",
+      "answer": [
+        {
+          "valueBoolean": true,
+          "item": [
+            {
+              "linkId": "PastUnfitnessForWorkGroup",
+              "item": [
+                {
+                  "linkId": "PastUnfitnessForWorkTotal",
+                  "text": "Wie viele Tage insgesamt?",
+                  "answer": [
+                    {
+                      "valueInteger": 14
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "PresentUnfitnessForWork",
+      "text": "Sind Sie aktuell von einem Arzt arbeitsunfähig geschrieben?",
+      "answer": [
+        {
+          "valueBoolean": true,
+          "item": [
+            {
+              "linkId": "PresentUnfitnessForWorkGroup",
+              "item": [
+                {
+                  "linkId": "PresentUnfitnessForWorkFrom",
+                  "text": "Von",
+                  "answer": [
+                    {
+                      "valueDate": "2020-09-16"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "PresentUnfitnessForWorkUntil",
+                  "text": "Bis",
+                  "answer": [
+                    {
+                      "valueDate": "2020-10-02"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "PensionApplicationApproval",
+      "text": "Haben Sie (teilweise) EU-Rente beantragt oder ist diese bewilligt?",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "TobaccoSmokingStatus",
+      "text": "Rauchen Sie?",
+      "answer":[
+        {
+          "valueCoding" : {
+            "system": "http://loinc.org",
+            "code": "LA18979-7",
+            "display": "Ja"
+          },
+          "item": [
+            {
+              "linkId": "TobaccoSmokingStatusGroup",
+              "item": [
+                {
+                  "linkId": "TobaccoSmokingStatusCigarettsPerDay",
+                  "text": "Wie viele Zigaretten pro Tag?",
+                  "answer": [
+                    {
+                      "valueInteger": 15
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "AUDIT-C.1",
+      "text": "Wie oft trinken Sie Alkohol?",
+      "answer":[
+        {
+          "valueCoding" : {
+            "system": "http://loinc.org",
+            "code": "LA18926-8",
+            "display": "1mal im Monat oder seltener"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "AUDIT-C.2",
+      "text": "Wenn Sie Alkohol trinken, wie viele Gläser trinken Sie dann üblicherweise an einem Tag? (ein Glas entspricht 0.33 L Bier, 0.25 L Wein/Sekt, 0.02 L Spirituosen)",
+      "answer":[
+        {
+          "valueCoding" : {
+            "system": "http://loinc.org",
+            "code": "LA15694-5",
+            "display": "1-2"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "AUDIT-C.3",
+      "text": "Wie oft trinken Sie sechs oder mehr Gläser alkoholischer Getränke bei einer Gelegenheit (z.B. beim Abendessen, auf einer Party)? (ein Glas entspricht 0.33 L Bier, 0.25 L Wein/Sekt, 0.02 L Spirituosen)",
+      "answer":[
+        {
+          "valueCoding" : {
+            "system": "http://loinc.org",
+            "code": "LA18933-4",
+            "display": "Seltener als 1mal im Monat"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "DrugAbuse",
+      "text": "Haben Sie in Ihrem Leben schon mehrmals Drogen wie z.B. Haschisch, Crystal, Ecstasy, Kokain oder Heroin eingenommen?",
+      "answer": [
+        {
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "linkId": "TreatmentReason",
+      "text": "Schildern Sie bitte mit Ihren eigenen Worten den Grund für den Wunsch der Behandlung.",
+      "answer": [
+        {
+          "valueString": "vor einigen Monaten hatte ich eine Kur und dabei sind mir Bilder meiner Kindheit wieder hochgekommen, die mich jetzt nicht loslassen; Angst & Panik"
+        }
+      ]
+    },
+    {
+      "linkId": "LifeEventsChecklist",
+      "text": "Viele Menschen haben irgendwann einmal in ihrem Leben ein sehr belastendes oder traumatisches Erlebnis oder werden Zeugen eines solchen Ereignisses. Bitte geben Sie für jedes der folgenden Ereignisse an, ob Sie es erlebt haben, entweder persönlich oder als Zeuge. Bitte kreuzen Sie JA an, wenn dies der Fall war, und NEIN, wenn dies nicht der Fall war.",
+      "item": [
+        {
+          "linkId": "LifeEventsChecklist.AccidentFireExplosion",
+          "text": "Schwerer Unfall, Feuer, Explosion (z.B. Arbeitsunfall, Verkehrsunfall)",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.NaturalDisaster",
+          "text": "Naturkatastrophe (z.B. Sturm, Überschwemmung, Erdbeben, Lawine)",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.PhysicalAssaultFamilyFriends",
+          "text": "Gewalttätiger Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen)",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.PhysicalAssaultForeignPerson",
+          "text": "Gewalttätiger Angriff durch fremde Person (z.B. körperlicher Angriff, Raub, mit Schusswaffe bedroht werden, Stichverletzung bekommen)",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.SexualAssaultFamilyFriends",
+          "text": "Sexueller Angriff durch jemanden aus dem Familien- oder Bekanntenkreis (z.B. Vergewaltigung, Nötigung)",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.SexualAssaultForeignPerson",
+          "text": "Sexueller Angriff durch fremde Person (z.B. Vergewaltigung, Nötigung)",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.CombatExposureWarZone",
+          "text": "Kampfeinsatz im Krieg oder Aufenthalt im Kriegsgebiet",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.SexualAbuseUnderage",
+          "text": "Sexueller Kontakt im Alter von unter 18 Jahren mit einer Person, die mindestens fünf Jahre älter war",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.Captivity",
+          "text": "Gefangenschaft",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.SevereHumanSuffering",
+          "text": "Folter",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.LifeThreateningIllnessInjury",
+          "text": "Lebensbedrohliche Krankheit",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.OtherTraumaticEvent",
+          "text": "Anderes traumatisches Ereignis",
+          "answer": [
+            {
+              "valueBoolean": true,
+              "item" : [
+                {
+                  "linkId": "LifeEventsChecklist.OtherTraumaticEventGroup",
+                  "item": [
+                    {
+                      "linkId": "LifeEventsChecklist.OtherTraumaticEventDetails",
+                      "text": "Beschreiben Sie dieses Ereignis",
+                      "answer": [
+                        {
+                          "valueString": "Suizid Vater, 2008"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "LifeEventsChecklist.MostStressfulEventGroup",
+          "text": "Wenn Sie mehrmals JA angekreuzt haben, geben Sie bitte hier die Nummer desjenigen Erlebnisses an, das Sie am meisten belastet",
+          "item" : [
+            {
+              "linkId": "LifeEventsChecklist.MostStressfullEventNumber",
+              "text": "Nr.",
+              "answer": [
+                {
+                  "valueInteger": 6
+                }
+              ]
+            },
+            {
+              "linkId": "LifeEventsChecklist.MostStressfulEventDetails",
+              "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten",
+              "answer": [
+                {
+                  "valueString": "Beim Spielen im Wald von Fremden angegriffen; sex. Mißbrauch"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "LifeEventsChecklist.MostStressfulEventPeriod",
+      "text": "Wann ist dieses belastende Ereignis passiert?",
+      "answer": [
+        {
+          "valueString": "vor mehr als 5 Jahren",
+          "item": [
+            {
+              "linkId": "LifeEventsChecklist.MostStressfulEventAge",
+              "text": "Im Alter von",
+              "answer": [
+                {
+                  "valueInteger": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "PC-PTSD-5",
+      "text": "Waren Sie oder haben Sie im vergangenen Monat...",
+      "item": [
+        {
+          "linkId": "PC-PTSD-5.1",
+          "text": "... Alpträume von dem/den Ereignis(sen) gehabt oder dachten Sie an das/die Ereignis(se) wenn Sie es nicht wollten?",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "PC-PTSD-5.2",
+          "text": "... sich sehr bemüht nicht an das/die Ereignis(se) zu denken oder sich große Mühe gegeben, Situationen zu vermeiden, die Sie an das/die Ereignis(se) erinnerten?",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "PC-PTSD-5.3",
+          "text": "... ständig auf der Hut, wachsam oder leicht zu erschrecken?",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "PC-PTSD-5.4",
+          "text": "... sich wie betäubt gefühlt oder entfremdet von anderen Menschen, Aktivitäten oder Ihrer Umgebung?",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "PC-PTSD-5.5",
+          "text": "... sich schuldig gefühlt oder konnten Sie nicht damit aufhören sich oder anderen Vorwürfe wegen des/der Ereignisse(s) zu machen oder wegen irgendwelcher Probleme, die durch das/die Ereignis(se) verursacht sein könnten?",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "PHQ-Mix",
+      "text": "Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt?",
+      "item": [
+        {
+          "linkId": "PHQ-9.1",
+          "text": "Wenig Interesse oder Freude an Ihren Tätigkeiten",
+          "answer":[
+            {
+              "valueCoding" : {
+                "system": "http://loinc.org",
+                "code": "LA6569-3",
+                "display": "An einzelnen Tagen"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "PHQ-9.2",
+          "text": "Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit",
+          "answer":[
+            {
+              "valueCoding" : {
+                "system": "http://loinc.org",
+                "code": "LA6570-1",
+                "display": "An mehr als der Hälfte der Tage"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "PHQ-9.9",
+          "text": "Gedanken, dass Sie lieber tot wären oder sich Leid zufügen möchten",
+          "answer":[
+            {
+              "valueCoding" : {
+                "system": "http://loinc.org",
+                "code": "LA6569-3",
+                "display": "An einzelnen Tagen"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "PHQ-4.1",
+          "text": "Nervosität, Ängstlichkeit oder Anspannung",
+          "answer":[
+            {
+              "valueCoding" : {
+                "system": "http://loinc.org",
+                "code": "LA6571-9",
+                "display": "Beinahe jeden Tag"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "PHQ-SADS.B2",
+          "text": "Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren",
+          "answer":[
+            {
+              "valueCoding" : {
+                "system": "http://loinc.org",
+                "code": "LA6569-3",
+                "display": "An einzelnen Tagen"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "PHQ-15.11",
+      "text": "Wenn eines oder mehrere der bisher in diesem Fragebogen beschriebenen Probleme bei Ihnen vorliegen, geben Sie bitte an, wie sehr diese Probleme es Ihnen erschwert haben, Ihre Arbeit zu tun, Ihren Haushalt zu regeln oder mit anderen Menschen zurechtzukommen",
+      "answer":[
+        {
+          "valueCoding" : {
+            "system": "http://loinc.org",
+            "code": "LA6575-0",
+            "display": "Relativ stark erschwert"
+          }
+        }
+      ]
+    }
+  ]
+}
