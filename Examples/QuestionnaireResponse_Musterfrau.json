@@ -36,8 +36,8 @@
       "answer": [
         {
           "valueCoding": {
-            "system": "http://tele-neps.de/fhir/ValueSet/geschlecht",
-            "code": "f",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "code": "female",
             "display": "weiblich"
           }
         }
@@ -49,8 +49,8 @@
       "answer": [
         {
           "valueCoding": {
-            "system": "http://tele-neps.de/fhir/ValueSet/Iso3166-1-2",
-            "code": "de",
+            "system": "urn:iso:std:iso:3166",
+            "code": "DE",
             "display": "Deutschland"
           }
         }
@@ -109,7 +109,7 @@
                   "answer": [
                     {
                       "valueCoding": {
-                        "system": "http://tele-neps.de/fhir/ValueSet/psychopharmaka-med-list",
+                        "system": "http://tele-neps.de/fhir/CodeSystem/psychopharmaka-med-list",
                         "code": "Lorazepam_Tavor_Tolid",
                         "display": "Lorazepam, Tavor, Tolid"
                       }
@@ -794,5 +794,5 @@
         }
       ]
     }
-  ]
+  ],
 }

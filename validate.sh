@@ -6,7 +6,9 @@
 ajv -s fhir-schemas/fhir.schema.json \
     -d "Examples/*.json" \
     -d "Terminologies/**/*.json" \
-    --remove-additional=failing
+    --remove-additional=failing \
+    --all-errors \
+    --messages=true
 
 [ $? -eq 0 ] || exit 1
 
@@ -16,6 +18,7 @@ ajv -s fhir-schemas/fhir.schema.json \
 # Download FHIR validator if not exist and validate FHIR resources
 [ ! -f ./validator_cli.jar ] && wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
 
+# Validate questionnaire against profiles and implementation guides
 java -jar validator_cli.jar Examples/Questionnaire.json \
      -profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire \
      -ig ExtensionProfiles/StructureDefinition-sdc-questionnaire.json \
@@ -26,4 +29,14 @@ java -jar validator_cli.jar Examples/Questionnaire.json \
      -ig ExtensionProfiles/extension-designnote.json \
      -ig ExtensionProfiles/extension-questionnaire-unit.json \
      -version 4.0.1 \
+     -debug
+
+[ $? -eq 0 ] || exit 1
+
+# Validate example questionnaire response against quesionnaire
+java -jar validator_cli.jar Examples/QuestionnaireResponse_Musterfrau-contained.json \
+     -questionnaire REQUIRED \
+     -ig Terminologies/ \
+     -version 4.0.1 \
+     -recurse \
      -debug
