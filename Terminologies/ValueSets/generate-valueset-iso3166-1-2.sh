@@ -35,17 +35,16 @@ curl -sL https://github.com/mledoze/countries/raw/master/dist/countries.json | j
     include: [
       {
         system: "urn:iso:std:iso:3166", 
-	concept: map(
-	  {
-            code: .cca2, 
-	    display: .name.common, 
-	    designation: [
-	      {
-	        language: "de", 
-		value: .translations.deu.common
-	      }
-            ]
-          })
+	      concept: map({
+          code: .cca2, 
+	        display: .name.common, 
+	        designation: [
+	          {
+	            language: "de", 
+	            value: .translations.deu.common
+	          }
+          ]
+        })
       }
     ]
   }
