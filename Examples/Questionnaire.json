@@ -1706,12 +1706,6 @@
               "text": "Nr.",
               "type": "integer",
               "required": true 
-            },
-            {
-              "linkId": "LifeEventsChecklist.MostStressfulEventDetails",
-              "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten",
-              "type": "string",
-              "required": true
             }
           ]
         }

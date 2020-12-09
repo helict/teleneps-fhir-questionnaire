@@ -626,15 +626,6 @@
                   "valueInteger": 6
                 }
               ]
-            },
-            {
-              "linkId": "LifeEventsChecklist.MostStressfulEventDetails",
-              "text": "Beschreiben Sie kurz dieses belastende Ereignis in Stichworten",
-              "answer": [
-                {
-                  "valueString": "Beim Spielen im Wald von Fremden angegriffen; sex. Mißbrauch"
-                }
-              ]
             }
           ]
         }
