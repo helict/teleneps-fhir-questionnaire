@@ -1705,7 +1705,7 @@
               "linkId": "LifeEventsChecklist.MostStressfullEventNumber",
               "text": "Nr.",
               "type": "integer",
-              "required": true 
+              "required": false
             }
           ]
         }
