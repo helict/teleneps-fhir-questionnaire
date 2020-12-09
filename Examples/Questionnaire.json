@@ -1715,8 +1715,71 @@
       "linkId": "LifeEventsChecklist.MostStressfulEventPeriod",
       "text": "Wann ist dieses belastende Ereignis passiert?",
       "type": "choice",
-      "required": false,
+      "required": true,
       "repeats": false,
+      "enableBehavior": "any",
+      "enableWhen": [
+        {
+          "question": "LifeEventsChecklist.AccidentFireExplosion",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.NaturalDisaster",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.PhysicalAssaultFamilyFriends",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.PhysicalAssaultForeignPerson",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.SexualAssaultFamilyFriends",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.SexualAssaultForeignPerson",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.CombatExposureWarZone",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.SexualAbuseUnderage",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.Captivity",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.SevereHumanSuffering",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.LifeThreateningIllnessInjury",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "LifeEventsChecklist.OtherTraumaticEvent",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ],
       "answerOption": [
         {
           "valueString": "vor weniger als 1 Monat"
